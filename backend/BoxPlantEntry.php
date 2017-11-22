@@ -45,7 +45,7 @@ class BoxPlantEntry extends DBObject
         return Util::dateSQL2PHP($this->selectF('start_date'));
     }
 
-    function setStartDate($startDate){
+    function setStartDate(DateTime $startDate){
         $this->updateF('start_date', Util::datePHP2SQL($startDate));
     }
 
@@ -55,7 +55,7 @@ class BoxPlantEntry extends DBObject
         return Util::dateSQL2PHP($this->selectF('end_date'));
     }
 
-    function setEndDate($endDate){
+    function setEndDate(DateTime $endDate){
         $this->updateF('end_date', Util::datePHP2SQL($endDate));
     }
 }

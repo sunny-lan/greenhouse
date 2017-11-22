@@ -62,8 +62,8 @@ class Util
     {
         $result = $db->query($query);
         //todo not sure if needed
-//        if (!$result)
-//            throw new \Exception("Database query failed: " . $db->error, Constants::ERR_DB);
+        if (!$result)
+            throw new \Exception("Database query failed: " . $db->error, Constants::ERR_DB);
         return $result;
     }
 
@@ -105,11 +105,14 @@ class Util
     //converts a mysql date to a php date
     public static function dateSQL2PHP($sqlDate)
     {
-        return strtotime($sqlDate);
+        if ($sqlDate)
+            return DateTime::createFromFormat('Y-m-d', $sqlDate);
+        return null;
     }
 
     //convert php date to mysql date
-    public static function datePHP2SQL($phpDate){
-        return date("Y-m-d", $phpDate);
+    public static function datePHP2SQL(DateTime $phpDate)
+    {
+        return $phpDate->format('Y-m-d');
     }
 }

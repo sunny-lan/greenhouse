@@ -13,7 +13,7 @@ class BoxPlantEntryMgr extends DBMgr
         parent::__construct('box_plants');
     }
 
-    function createBoxPlantEntry(Box $box, Plant $plant, $startDate)
+    function createBoxPlantEntry(Box $box, Plant $plant, DateTime $startDate)
     {
         $boxID = $box->getID();
         $plantID = $plant->getID();
@@ -23,11 +23,29 @@ class BoxPlantEntryMgr extends DBMgr
         return new BoxPlantEntry(Util::getLastID($this->db));
     }
 
-    function listBoxPlantEntries(){
+    function listBoxPlantEntries()
+    {
         $sqlRes = Util::queryW($this->db, "SELECT id FROM box_plants");
         $res = [];
         while ($row = $sqlRes->fetch_assoc())
             $res[] = new BoxPlantEntry($row['id']);
         return $res;
+    }
+
+
+    //util functions
+
+    function getEarliestDate()
+    {
+        return Util::dateSQL2PHP(Util::queryW($this->db,
+            "SELECT min(start_date) AS earliest FROM box_plants"
+        )->fetch_assoc()['earliest']);
+    }
+
+    function getLatestDate()
+    {
+        return Util::dateSQL2PHP(Util::queryW($this->db,
+            "SELECT max(end_date) AS latest FROM box_plants"
+        )->fetch_assoc()['latest']);
     }
 }

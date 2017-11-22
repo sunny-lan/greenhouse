@@ -41,28 +41,4 @@ class UserMgr extends DBMgr
             $res[] = new User($row['id']);
         return $res;
     }
-
-
-//    function createUser($params)
-//    {
-//        $myType = $GLOBALS['user']->getType();
-//
-//        $type = $params["type"];
-//        $username = $params["username"];
-//        $password = $params["password"];
-//
-//        $mgr = new UserMgr();
-//
-//        if ($type === Constants::LVL_ADMIN) {
-//            if ($myType != Constants::LVL_ADMIN)
-//                throw new Exception("Not enough permissions", Constants::ERR_PERMS);
-//        } else if ($type === Constants::LVL_SUPERVISOR || $type === Constants::LVL_STUDENT) {
-//            if ($myType != Constants::LVL_ADMIN && $myType != Constants::LVL_SUPERVISOR)
-//                throw new Exception("Not enough permissions", Constants::ERR_PERMS);
-//        } else {
-//            throw new Exception("Type does not exist", Constants::ERR_NULL);
-//        }
-//
-//        $mgr->createUser($username, $password, $type);
-//    }
 }

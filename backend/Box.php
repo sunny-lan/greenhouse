@@ -38,12 +38,14 @@ class Box extends DBObject
         return $mgr->createBoxPlantEntry($this, $plant, $startDate);
     }
 
-    function listPlantEntries($date)
+    function listPlantEntries(DateTime $startDate = null, DateTime $endDate = null)
     {
         $query = "SELECT id FROM box_plants";
-        if (isset($date)) {
-            $date = Util::datePHP2SQL($date);
-            $query .= " WHERE start_date<='$date' AND '$date'<=coalesce(end_date, DATE 9999-12-31)";
+        if ($startDate !== null) {
+            if ($endDate === null) $endDate = $startDate;
+            $startDate = Util::datePHP2SQL($startDate);
+            $endDate = Util::datePHP2SQL($endDate);
+            $query .= " WHERE start_date <= '$endDate' AND COALESCE(end_date, 9999-12-31) >= '$startDate'";
         }
         $sqlRes = Util::queryW($this->db, $query);
 

@@ -36,7 +36,7 @@ class User extends DBObject
 
     function getType()
     {
-        return $this->selectF('type');
+        return (int)$this->selectF('type');
     }
 
     function setType(string $type)
@@ -113,15 +113,16 @@ class User extends DBObject
         $myID = $this->getID();
         $myType = $this->getType();
         if ($myType === Constants::LVL_STUDENT)
-            $condition = "student='$myID'";
+            $condition = "student = '$myID'";
         else if ($myType === Constants::LVL_SUPERVISOR)
-            $condition = "supervisor='$myID'";
+            $condition = "supervisor = '$myID'";
         else
             throw new Exception('Only supervisors and students can list shifts', Constants::ERR_PERMS);
         $sqlRes = Util::queryW($this->db, "SELECT id FROM shifts WHERE $condition");
         $res = [];
         while ($row = $sqlRes->fetch_assoc())
             $res[] = new Shift($row['id']);
+        return $res;
     }
 
 

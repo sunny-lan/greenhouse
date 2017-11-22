@@ -10,7 +10,7 @@ class Shift extends DBObject
 {
     function __construct(int $id)
     {
-        parent::__construct('shift', $id);
+        parent::__construct('shifts', $id);
     }
 
 
@@ -19,7 +19,7 @@ class Shift extends DBObject
     function getStudent()
     {
         $studentID = $this->selectF('student');
-        return new User( $studentID);
+        return new User($studentID);
     }
 
     function setStudent(User $student)
@@ -71,14 +71,14 @@ class Shift extends DBObject
 
     //time completed
 
-    function getTimeCompleted()
+    function getDateCompleted()
     {
-        return $this->selectF('time_completed');
+        return Util::dateSQL2PHP($this->selectF('date_completed'));
     }
 
-    function setTimeCompleted($timeCompleted)
+    function setDateCompleted(DateTime $dateCompleted)
     {
-        $this->updateF('time_completed', $timeCompleted);
+        $this->updateF('date_completed', $dateCompleted);
     }
 
 
