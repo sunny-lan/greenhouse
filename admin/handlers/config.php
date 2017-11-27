@@ -13,3 +13,4 @@ $mgr = new ConfigMgr();
 foreach ($_POST as $name => $value) {
     $mgr->setValue($name, $value);
 }
+Util::returnPrevPage();

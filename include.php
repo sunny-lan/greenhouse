@@ -3,8 +3,8 @@
 //todo remove in production
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-define('SUB_DIR', '/greenhouse/');
-define('SITE_ROOT', $_SERVER["DOCUMENT_ROOT"] . SUB_DIR);
+define('SUB_DIR', '/greenhouse');
+define('SITE_ROOT', $_SERVER["DOCUMENT_ROOT"] . SUB_DIR . '/');
 require_once SITE_ROOT . 'backend/Constants.php';
 require_once SITE_ROOT . 'backend/Util.php';
 require_once SITE_ROOT . 'backend/DBMgr.php';
@@ -20,5 +20,10 @@ require_once SITE_ROOT . 'backend/ShiftMgr.php';
 require_once SITE_ROOT . 'backend/User.php';
 require_once SITE_ROOT . 'backend/UserMgr.php';
 require_once SITE_ROOT . 'backend/ConfigMgr.php';
+
+require_once SITE_ROOT . 'components/Component.php';
+require_once SITE_ROOT . 'components/JSRequire.php';
+require_once SITE_ROOT . 'components/PageWrapper.php';
+require_once SITE_ROOT . 'components/Navbar.php';
 
 require_once SITE_ROOT . 'backend/login.php';

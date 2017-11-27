@@ -115,4 +115,24 @@ class Util
     {
         return $phpDate->format('Y-m-d');
     }
+
+    //returns to prev url
+    public static function returnPrevPage()
+    {
+        if (array_key_exists('srcURL', $_GET))
+            $prev = $_GET['srcURL'];
+        else
+            $prev = $_SERVER['HTTP_REFERER'];
+        header("Location: $prev");
+        die();
+    }
+
+    //creates link js
+    public static function linkStr($url, $keepSrc = false)
+    {
+        $actualURL = SUB_DIR . $url;
+        if ($keepSrc) $keepSrc = "true";
+        else $keepSrc = "false";
+        return "javascript: setPage([], '".$actualURL."', undefined, $keepSrc)";
+    }
 }

@@ -10,3 +10,4 @@ require_once '../../include.php';
 $mgr = new PlantMgr();
 
 $mgr->createPlant($_POST['name']);
+Util::returnPrevPage();

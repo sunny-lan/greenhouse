@@ -1,21 +1,23 @@
 <?php
 require_once '../include.php';
 $mgr = new ConfigMgr();
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Configuration</title>
-</head>
-<body>
-<h1>Edit configuration</h1>
+
+$configList = "";
+foreach ($mgr->listNames() as $name) {
+    $configList .= <<<HTML
+    {$name}: <input name="{$name}" value="{$mgr->getValue($name)}"/>
+    <br>
+HTML;
+}
+
+$page = <<<HTML
 <form method="post" action="handlers/config.php">
-    <?php foreach ($mgr->listNames() as $name): ?>
-        <?= $name ?>: <input name="<?= $name ?>" value="<?= $mgr->getValue($name) ?>"/>
-        <br>
-    <?php endforeach; ?>
+    {$configList}
     <input type="submit" value="save"/>
 </form>
-</body>
-</html>
+HTML;
+
+echo PageWrapper::render([
+    'title' => 'Configuration',
+    'content' => $page
+]);

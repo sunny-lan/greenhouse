@@ -9,3 +9,4 @@ require_once '../../include.php';
 
 $plant = new Plant($_POST['id']);
 $plant->setPlantName($_POST['name']);
+Util::returnPrevPage();

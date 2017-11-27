@@ -9,3 +9,4 @@ require_once '../include.php';
 
 $mgr = new UserMgr();
 $_SESSION['uid'] = $mgr->login($_POST['username'], $_POST['password'])->getID();
+Util::returnPrevPage();
