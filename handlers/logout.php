@@ -5,7 +5,9 @@
  * Date: 2017-11-27
  * Time: 2:23 PM
  */
-include '../include.php';
-logout();
-header("Location: " . SUB_DIR . "/login.php");
-die();
+require_once '../include.php';
+(function() {
+    logout();
+    header("Location: " . SUB_DIR . "/login.php");
+    die();
+})();

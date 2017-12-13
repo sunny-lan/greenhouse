@@ -40,12 +40,18 @@ class Box extends DBObject
 
     function listPlantEntries(DateTime $startDate = null, DateTime $endDate = null)
     {
-        $query = "SELECT id FROM box_plants";
-        if ($startDate !== null) {
-            if ($endDate === null) $endDate = $startDate;
-            $startDate = Util::datePHP2SQL($startDate);
+        $myID = $this->getID();
+        $query = "SELECT id FROM box_plants WHERE box_id = '$myID'";
+
+
+        if (isset($endDate)) {
             $endDate = Util::datePHP2SQL($endDate);
-            $query .= " WHERE start_date <= '$endDate' AND COALESCE(end_date, 9999-12-31) >= '$startDate'";
+            $query .= " AND start_date <= '$endDate'";
+        }
+
+        if(isset($startDate)){
+            $startDate = Util::datePHP2SQL($startDate);
+            $query.=" AND COALESCE(end_date, 9999-12-31) >= '$startDate'";
         }
         $sqlRes = Util::queryW($this->db, $query);
 

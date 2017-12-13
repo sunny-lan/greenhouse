@@ -7,10 +7,12 @@
  */
 
 require_once '../../include.php';
+(function ()
+{
+    $mgr = new ConfigMgr();
 
-$mgr = new ConfigMgr();
-
-foreach ($_POST as $name => $value) {
-    $mgr->setValue($name, $value);
-}
-Util::returnPrevPage();
+    foreach ($_POST as $name => $value) {
+        $mgr->setValue($name, $value);
+    }
+    Util::returnPrevPage();
+})();

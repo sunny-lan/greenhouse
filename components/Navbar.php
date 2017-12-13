@@ -8,17 +8,12 @@
  */
 class Navbar implements Component
 {
-    //TODO remove this custiness
-    static function e($url)
-    {
-        return Util::linkStr($url);
-    }
-
     static function render($param = []): string
     {
-        $k = new Navbar();
+        $util = new Util();
 
         JSRequire::req('js/util.js');
+
         $SUB_DIR = SUB_DIR;
 
         if (isLoggedIn()) {
@@ -26,28 +21,47 @@ class Navbar implements Component
             /* @var $user User */
             $specificOptions = "";
             if ($user->getType() === Constants::LVL_ADMIN) {
-                $specificOptions = <<<HTML
-                <a href="{$k->e("/admin/config.php")}">config</a>
-                <a href="{$k->e("/admin/plants.php")}">plants</a>
+                //these options are shown only if current user is admin
+                $specificOptions .= <<<HTML
+                <a href="{$util::linkStr("/admin/config.php")}">config</a>
+                <a href="{$util::linkStr("/admin/plants.php")}">plants</a>
+                <a href="{$util::linkStr("/admin/boxes.php")}">boxes</a>
+                <a href="{$util::linkStr("/admin/users.php")}">users</a>
+                <a href="{$util::linkStr("/admin/pages.php")}">pages</a>
+HTML;
+            }
+            if ($user->getType() === Constants::LVL_SUPERVISOR) {
+                $specificOptions .= <<<HTML
+                <a href="{$util::linkStr("/volunteer/shifts.php")}">shifts</a>
+HTML;
+            }
+            if ($user->getType() === Constants::LVL_STUDENT) {
+                $specificOptions .= <<<HTML
+                <a href="{$util::linkStr("/volunteer/shifts.php")}">shifts</a>
 HTML;
             }
             $displayName = $user->getName();
             if ($displayName === null)
                 $displayName = "User id " . $user->getID();
+            //these options are shown only when logged in
             $loggedInOptions = <<<HTML
              - welcome, {$displayName}
             {$specificOptions}
-            <a href="{$k->e("/handlers/logout.php")}">logout</a>
+            <a href="javascript: setPage(['id', '{$user->getID()}'], '{$SUB_DIR}/updateUser.php');">profile</a>
+            <a href="{$util::linkStr("/handlers/logout.php")}">logout</a>
 HTML;
         } else {
-            $lnk = $k->e("/login.php");
-            $loggedInOptions = '<a href="'.$lnk.'">login</a>';
+            //these options are shown only when logged out
+            $loggedInOptions = <<<HTML
+            <a href="{$util::linkStr("/login.php")}">login</a>
+            <a href="{$util::linkStr("/createUser.php")}">create user</a>
+HTML;
         }
 
-
+        //these options are always shown
         return <<<HTML
         <div id="navbar">
-            <a href="{$k->e("/map.php")}">interactive map</a>
+            <a href="{$util::linkStr("/garden/map.php")}">garden</a>
             {$loggedInOptions}
         </div>
 HTML;

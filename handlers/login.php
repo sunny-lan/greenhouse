@@ -6,7 +6,8 @@
  * Time: 3:04 PM
  */
 require_once '../include.php';
-
-$mgr = new UserMgr();
-$_SESSION['uid'] = $mgr->login($_POST['username'], $_POST['password'])->getID();
-Util::returnPrevPage();
+(function() {
+    $mgr = new UserMgr();
+    $_SESSION['uid'] = $mgr->login($_POST['username'], $_POST['password'])->getID();
+    Util::returnPrevPage();
+})();

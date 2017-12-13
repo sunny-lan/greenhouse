@@ -16,7 +16,10 @@ class UserMgr extends DBMgr
     function getUser(string $username)
     {
         $username = $this->db->escape_string($username);
-        return new User(Util::queryW($this->db, "SELECT id FROM users WHERE username='$username'")->fetch_assoc()['id']);
+        $res = Util::queryW($this->db, "SELECT id FROM users WHERE username='$username'")->fetch_assoc()['id'];
+        if (!$res)
+            throw new Exception('Invalid username', Constants::ERR_LOGIN);
+        return new User($res);
     }
 
     function login(string $username, string $password)
@@ -34,7 +37,8 @@ class UserMgr extends DBMgr
         return new User(Util::getLastID($this->db));
     }
 
-    function listUsers(){
+    function listUsers()
+    {
         $sqlRes = Util::queryW($this->db, "SELECT id FROM users");
         $res = [];
         while ($row = $sqlRes->fetch_assoc())

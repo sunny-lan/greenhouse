@@ -116,6 +116,12 @@ class Util
         return $phpDate->format('Y-m-d');
     }
 
+    //changes page
+    public static function redirect($page){
+        header("Location: $page");
+        die();
+    }
+
     //returns to prev url
     public static function returnPrevPage()
     {
@@ -123,8 +129,7 @@ class Util
             $prev = $_GET['srcURL'];
         else
             $prev = $_SERVER['HTTP_REFERER'];
-        header("Location: $prev");
-        die();
+        self::redirect($prev);
     }
 
     //creates link js
@@ -133,6 +138,14 @@ class Util
         $actualURL = SUB_DIR . $url;
         if ($keepSrc) $keepSrc = "true";
         else $keepSrc = "false";
-        return "javascript: setPage([], '".$actualURL."', undefined, $keepSrc)";
+        return "javascript: setPage([], '" . $actualURL . "', undefined, $keepSrc)";
+    }
+
+    //guards agains calling null
+    public static function guard($obj, $call, $param = null, $default = null)
+    {
+        if ($obj === null) return $default;
+        if ($param === null) return $obj->{$call}();
+        return $obj->{$call}($param);
     }
 }

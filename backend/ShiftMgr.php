@@ -13,16 +13,18 @@ class ShiftMgr extends DBMgr
         parent::__construct('shifts');
     }
 
-    function createShift(User $student, string $activity, int $duration, $timeCompleted)
+    function createShift(User $student, string $activity, int $duration, DateTime $dateCompleted)
     {
         $studentID = $student->getID();
         $status = Constants::STATUS_UNSIGNED;
+        $dateCompleted = $dateCompleted->format('Y-m-d');
         Util::queryW($this->db,
-            "INSERT INTO shifts (student, activity, duration, time_completed, status) VALUES ('$studentID', '$activity', '$duration', '$timeCompleted', '$status')");
+            "INSERT INTO shifts (student, activity, duration, date_completed, status) VALUES ('$studentID', '$activity', '$duration', '$dateCompleted', '$status')");
         return new Shift(Util::getLastID($this->db));
     }
 
-    function listShifts(){
+    function listShifts()
+    {
         $sqlRes = Util::queryW($this->db, "SELECT id FROM shifts");
         $res = [];
         while ($row = $sqlRes->fetch_assoc())

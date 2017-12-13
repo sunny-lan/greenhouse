@@ -20,10 +20,20 @@ require_once SITE_ROOT . 'backend/ShiftMgr.php';
 require_once SITE_ROOT . 'backend/User.php';
 require_once SITE_ROOT . 'backend/UserMgr.php';
 require_once SITE_ROOT . 'backend/ConfigMgr.php';
+require_once SITE_ROOT . 'backend/Harvest.php';
+require_once SITE_ROOT . 'backend/HarvestMgr.php';
+require_once SITE_ROOT . 'backend/Page.php';
+require_once SITE_ROOT . 'backend/PageMgr.php';
 
 require_once SITE_ROOT . 'components/Component.php';
 require_once SITE_ROOT . 'components/JSRequire.php';
 require_once SITE_ROOT . 'components/PageWrapper.php';
 require_once SITE_ROOT . 'components/Navbar.php';
+require_once SITE_ROOT . 'components/UserFormFields.php';
+require_once SITE_ROOT . 'components/PageFormFields.php';
+require_once SITE_ROOT . 'components/BoxPlantEntryFormFields.php';
+require_once SITE_ROOT . 'components/TimeFilter.php';
+require_once SITE_ROOT . 'components/Map.php';
+require_once SITE_ROOT . 'components/Harvest.php';
 
 require_once SITE_ROOT . 'backend/login.php';

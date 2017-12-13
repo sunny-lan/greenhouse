@@ -6,8 +6,9 @@
  * Time: 3:52 PM
  */
 require_once '../../include.php';
-
+(function(){
 $mgr = new PlantMgr();
 
 $mgr->createPlant($_POST['name']);
 Util::returnPrevPage();
+})();

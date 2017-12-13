@@ -14,6 +14,18 @@ class User extends DBObject
     }
 
 
+    //username
+
+    function getUsername()
+    {
+        return $this->selectF('username');
+    }
+
+    function setUsername(string $username)
+    {
+        $this->updateF('username', $username);
+    }
+
     //password
 
     function getPasswordHash()
@@ -108,14 +120,24 @@ class User extends DBObject
             throw new Exception('Only supervisors and students can create shifts', Constants::ERR_PERMS);
     }
 
-    function listShifts()
+    function listShifts(User $otherUser=null)
     {
         $myID = $this->getID();
         $myType = $this->getType();
-        if ($myType === Constants::LVL_STUDENT)
+        if ($otherUser!==null)
+        $otherId = $otherUser->getID();
+        if ($myType === Constants::LVL_STUDENT){
             $condition = "student = '$myID'";
-        else if ($myType === Constants::LVL_SUPERVISOR)
-            $condition = "supervisor = '$myID'";
+            if($otherUser !== null){
+                $condition.= " and supervisor = '$otherId'";
+            }
+        }
+        else if ($myType === Constants::LVL_SUPERVISOR){
+            $condition = "(supervisor = '$myID' or supervisor IS NULL)";
+            if($otherUser !== null){
+                $condition .= " and student = '$otherId'";
+            }
+        }
         else
             throw new Exception('Only supervisors and students can list shifts', Constants::ERR_PERMS);
         $sqlRes = Util::queryW($this->db, "SELECT id FROM shifts WHERE $condition");
@@ -131,6 +153,8 @@ class User extends DBObject
     function delete()
     {
         Util::queryW($this->db, "DELETE FROM users WHERE id='$this->id'");
+        if ($GLOBALS['user']->getID() === $this->id)
+            logout();//todo sketch
         $this->id = -1;
     }
 }
