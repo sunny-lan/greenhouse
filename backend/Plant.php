@@ -26,4 +26,13 @@ class Plant extends DBObject
         $this->updateF('name', $name);
     }
 
+
+    //delete
+
+    function delete()
+    {
+        $id = $this->id;
+        Util::queryW($this->db, "DELETE FROM plants WHERE id='$id'");
+        $this->id = -1;
+    }
 }

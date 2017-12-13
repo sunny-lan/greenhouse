@@ -59,8 +59,6 @@ class Map implements Component
                     -
                     <a href="javascript:setPage(['id', '{$entry->getID()}'], '{$subDir}/admin/updateBoxPlantEntry.php')">edit</a>
 HTML;
-
-
                 $plantHTML .= <<<HTML
                 <li>
                     {$entry->getPlant()->getPlantName()} 
@@ -73,12 +71,14 @@ HTML;
             $adminHTML = '';
             if ($GLOBALS['userLvl'] === Constants::LVL_ADMIN)
                 $adminHTML = <<<HTML
+                <a href="javascript:setPage(['id', '{$box->getID()}'], '{$subDir}/admin/updateBox.php')">edit</a>
                 <a href="javascript:setPage(['boxID', '{$box->getID()}'], '{$subDir}/admin/createBoxPlantEntry.php')">add plant entry</a>
+                <a href="javascript:setPage(['id', '{$box->getID()}'], '{$subDir}/admin/deleteBoxConfirm.php')">delete</a>
 HTML;
 
             $boxHTML .= <<<HTML
             <li>
-                <h2>{$box->getBoxDescription()}</h2>
+                <h2>{$box->getDescription()}</h2>
                 {$adminHTML}
                 <ul>{$plantHTML}</ul>
             </li>

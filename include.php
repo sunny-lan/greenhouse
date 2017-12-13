@@ -34,6 +34,7 @@ require_once SITE_ROOT . 'components/PageFormFields.php';
 require_once SITE_ROOT . 'components/BoxPlantEntryFormFields.php';
 require_once SITE_ROOT . 'components/TimeFilter.php';
 require_once SITE_ROOT . 'components/Map.php';
-require_once SITE_ROOT . 'components/Harvest.php';
+require_once SITE_ROOT . 'components/HarvestDisplay.php';
+require_once SITE_ROOT . 'components/BoxFormFields.php';
 
 require_once SITE_ROOT . 'backend/login.php';

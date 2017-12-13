@@ -16,12 +16,12 @@ class Box extends DBObject
 
     //description
 
-    function getBoxDescription()
+    function getDescription()
     {
         return $this->selectF('description');
     }
 
-    function setBoxDescription(string $description)
+    function setDescription(string $description)
     {
         $this->updateF('description', $description);
     }
@@ -59,5 +59,15 @@ class Box extends DBObject
         while ($row = $sqlRes->fetch_assoc())
             $res[] = new BoxPlantEntry($row['id']);
         return $res;
+    }
+
+
+    //delete
+
+    function delete()
+    {
+        $id = $this->id;
+        Util::queryW($this->db, "DELETE FROM boxes WHERE id='$id'");
+        $this->id = -1;
     }
 }

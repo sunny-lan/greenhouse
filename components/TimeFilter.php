@@ -49,7 +49,7 @@ HTML;
         return <<<HTML
         <a href='javascript: setFilter();'>all</a>
         {$filterLinks}
-        <a href="javascript: setFilter('{$today}', '{$today}');">current</a>
+        <a href="javascript: setFilter('{$today}', '{$today}');">Today</a>
         <form action="" method="get">
             Start date: <input name="startDate" value="{$util::guard($startDate, 'format', 'Y-m-d')}">
             End date: <input name="endDate" value="{$util::guard($endDate, 'format', 'Y-m-d')}">

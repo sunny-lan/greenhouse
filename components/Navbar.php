@@ -25,7 +25,6 @@ class Navbar implements Component
                 $specificOptions .= <<<HTML
                 <a href="{$util::linkStr("/admin/config.php")}">config</a>
                 <a href="{$util::linkStr("/admin/plants.php")}">plants</a>
-                <a href="{$util::linkStr("/admin/boxes.php")}">boxes</a>
                 <a href="{$util::linkStr("/admin/users.php")}">users</a>
                 <a href="{$util::linkStr("/admin/pages.php")}">pages</a>
 HTML;

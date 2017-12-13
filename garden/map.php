@@ -9,7 +9,7 @@ require_once '../include.php';
         $param['endDate'] = DateTime::createFromFormat('Y-m-d', $_GET['endDate']);
 
     $map = Map::render($param);
-    $harvest = Harvests::render($param);
+    $harvest = HarvestDisplay::render($param);
 
     $mgr = new BoxPlantEntryMgr();
     $param['earliestDate'] = $mgr->getEarliestDate();
