@@ -8,7 +8,7 @@ class Util
     {
         // Load configuration as an array. Use the actual location of your configuration file
         $config = parse_ini_file(SITE_ROOT . 'backend/config.ini');
-        $connection = new \mysqli('localhost', $config['username'], $config['password'], $config['dbname']);
+        $connection = new \mysqli($config['host'], $config['username'], $config['password'], $config['dbname']);
         // If connection was not successful, handle  the error
         if (isset($connection->connect_error)) {
             // Handle error - notify administrator, log to a file, show an error screen, etc
