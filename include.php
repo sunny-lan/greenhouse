@@ -3,7 +3,7 @@
 error_reporting(E_ALL);
 
 ini_set('display_errors', 1);
-define('SUB_DIR', '/greenhouse');
+define('SUB_DIR', '/');
 define('SITE_ROOT', $_SERVER["DOCUMENT_ROOT"] . SUB_DIR . '/');
 require_once SITE_ROOT . 'backend/Constants.php';
 require_once SITE_ROOT . 'backend/Util.php';
