@@ -3,9 +3,9 @@
  * @param pairs What parameters to set eg. [[paramKey, paramValue], [paramKey, paramValue] ...] - May also contain a single pair
  * @param location The location to navigate to
  * @param clearParams Set to true in order to clear all old parameters
- * @param keepSrc Set to true in order to keep the URL of the last page
+ * @param clearSrc Set to true in order to keep the URL of the last page
  */
-function setPage(pairs, location, clearParams, keepSrc) {
+function setPage(pairs, location, clearParams, clearSrc) {
     if (pairs[0])
         if (!Array.isArray(pairs[0]))
             pairs = [pairs];
@@ -13,6 +13,12 @@ function setPage(pairs, location, clearParams, keepSrc) {
     var l = window.location;
 
     var params = {};
+
+    // inject srcURL into params
+    var realLocation = window.location.protocol + '//' + window.location.host + window.location.pathname;
+    if (!clearSrc && !clearParams)
+        params.srcURL = realLocation;
+    else params.srcURL= location;
 
     if (!clearParams) {
         // get old params from url
@@ -24,11 +30,6 @@ function setPage(pairs, location, clearParams, keepSrc) {
             params[r[1]] = r[2];
         }
     }
-
-    // inject srcURL into params
-    var realLocation = window.location.protocol + '//' + window.location.host + window.location.pathname;
-    if (!keepSrc)
-        params.srcURL = realLocation;
 
     // inject given params into old params
     for (var pairIdx = 0; pairIdx < pairs.length; pairIdx++) {

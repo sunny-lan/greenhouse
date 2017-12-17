@@ -85,6 +85,12 @@ HTML;
 HTML;
         }
 
-        return "<ul>$boxHTML</ul>";
+        if ($GLOBALS['userLvl'] === Constants::LVL_ADMIN)
+            $adminHTML = <<<HTML
+            <a href="javascript:setPage([], '{$subDir}/admin/createBox.php')">add box</a>
+HTML;
+        else $adminHTML = "";
+
+        return "<ul>$boxHTML</ul>$adminHTML";
     }
 }

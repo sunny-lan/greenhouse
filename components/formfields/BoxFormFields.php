@@ -18,7 +18,6 @@ class BoxFormFields implements Component
             $box = $param['box'];
 
         $page = <<<HTML
-        <input name="id" value="{$util::guard($box, 'getID')}" type="hidden">
         Description: <input name="description" value="{$util::guard($box, 'getDescription')}">
 HTML;
 

@@ -22,6 +22,7 @@ class PageWrapper implements Component
         <head>
             <meta charset="UTF-8">
             <title>{$title}</title>
+            <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
             <link rel="stylesheet" href="{$SUB_DIR}/css/main.css">
             {$requireHTML}
         </head>

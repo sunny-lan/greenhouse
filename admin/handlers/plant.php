@@ -6,8 +6,10 @@
  * Time: 3:35 PM
  */
 require_once '../../include.php';
-(function() {
-    $plant = new Plant($_POST['id']);
-    $plant->setPlantName($_POST['name']);
+(function () {
+    if ($GLOBALS['userLvl'] == Constants::LVL_ADMIN) {
+        $plant = new Plant($_POST['id']);
+        $plant->setPlantName($_POST['name']);
+    }
     Util::returnPrevPage();
 })();

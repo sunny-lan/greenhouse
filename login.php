@@ -1,15 +1,17 @@
 <?php
 require_once 'include.php';
-(function() {
+(function () {
 
     $page = <<<HTML
-<form method="post" action="handlers/login.php">
     username/student id: <input name="username" title="Username"/>
     password: <input name="password" title="Password" type="password"/>
     <input type="submit" value="login">
-</form>
 HTML;
 
+    $page = Form::render([
+        'action' => 'handlers/login.php',
+        'content' => $page
+    ]);
 
     echo PageWrapper::render([
         "title" => "Login",

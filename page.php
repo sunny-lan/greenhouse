@@ -6,7 +6,7 @@
  * Time: 3:16 PM
  */
 require_once 'include.php';
-(function() {
+(function () {
     $mgr = new PageMgr();
 
     if (array_key_exists('name', $_GET))
@@ -16,8 +16,14 @@ require_once 'include.php';
 
     $page = new Page($id);
 
-    echo PageWrapper::render([
-        "title" => $page->getName(),
-        "content" => $page->getContent()
-    ]);
+    if (array_key_exists('raw', $_GET)) {
+        header('Content-Type: ' . $page->getContentType());
+        $page = $page->getContent();
+    } else
+        $page = PageWrapper::render([
+            "title" => $page->getName(),
+            "content" => $page->getContent()
+        ]);
+
+    echo $page;
 })();

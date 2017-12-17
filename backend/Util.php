@@ -84,9 +84,11 @@ class Util
     {
         if ($str === null)
             $str = 'NULL';
-        else
-            $str = $db->escape_string($str);
-        return "'$str'";
+        else {
+            $str=$db->escape_string($str);
+            $str = "'$str'";
+        }
+        return $str;
     }
 
     //updates a single field in a table with ids
@@ -98,8 +100,8 @@ class Util
     //  value - the value to set the column to
     public static function updateF(mysqli $db, $table, $id, $field, $value)
     {
-        $value = $db->escape_string($value);
-        Util::queryW($db, "UPDATE $table SET $field='$value' WHERE id='$id'");
+        $value = self::escape($db, $value);
+        Util::queryW($db, "UPDATE $table SET $field=$value WHERE id='$id'");
     }
 
     //converts a mysql date to a php date
@@ -117,8 +119,9 @@ class Util
     }
 
     //changes page
-    public static function redirect($page){
-        header("Location: $page");
+    public static function redirect($page)
+    {
+        header("Location: $page?". http_build_query($_GET));
         die();
     }
 
@@ -133,12 +136,10 @@ class Util
     }
 
     //creates link js
-    public static function linkStr($url, $keepSrc = false)
+    public static function linkStr($url, $clearParams = false, $clearSrc = false)
     {
         $actualURL = SUB_DIR . $url;
-        if ($keepSrc) $keepSrc = "true";
-        else $keepSrc = "false";
-        return "javascript: setPage([], '" . $actualURL . "', undefined, $keepSrc)";
+        return "javascript: setPage([], '" . $actualURL . "', $clearParams, $clearSrc)";
     }
 
     //guards agains calling null

@@ -17,10 +17,10 @@ HTML;
     }
 
     $page = <<<HTML
-<ul>
-    {$plantsList}
-</ul>
-<a href="createPlant.php">create</a>
+    <ul>
+        {$plantsList}
+    </ul>
+    <a href="createPlant.php">create</a>
 HTML;
 
     echo PageWrapper::render([

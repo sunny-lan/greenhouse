@@ -11,13 +11,15 @@ require_once '../include.php';
     $fields = BoxPlantEntryFormFields::render(['entry' => $entry]);
 
     $page = <<<HTML
-    <form method="post" action="handlers/createUpdateBoxPlantEntry.php">
-        <input type="hidden" name='id' value="{$entry->getID()}">
-        {$fields}
-        <input type="submit" value="Save">
-    </form>
+    <input type="hidden" name='id' value="{$entry->getID()}">
+    {$fields}
+    <input type="submit" value="Save">
 HTML;
 
+    $page = Form::render([
+        'action' => 'handlers/createUpdateBoxPlantEntry.php',
+        'content' => $page
+    ]);
 
     echo PageWrapper::render([
         "title" => "Edit entry",

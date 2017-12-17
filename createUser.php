@@ -4,12 +4,14 @@ require_once 'include.php';
     $fields = UserFormFields::render();
 
     $page = <<<HTML
-<form method="post" action="handlers/createUpdateUser.php">
     {$fields}
     <input type="submit" value="Create">
-</form>
 HTML;
 
+    $page=Form::render([
+        'action'=>'handlers/createUpdateUser.php',
+        'content'=>$page
+    ]);
 
     echo PageWrapper::render([
         "title" => "Create user",

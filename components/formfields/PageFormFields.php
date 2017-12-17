@@ -24,7 +24,9 @@ class PageFormFields implements Component
         <input name="name" value="{$util::guard($pageObj, 'getName')}">
         Content type: 
         <select name="contentType">
-            <option value="file">file</option>
+            <option value="text/plain">Text file</option>
+            <option value="application/pdf">PDF file</option>
+            <option value="text/html">HTML file</option>
         </select>
         Select file to upload: 
         <input name="content" type="file">

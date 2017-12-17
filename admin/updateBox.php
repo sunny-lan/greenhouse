@@ -11,11 +11,16 @@ require_once '../include.php';
     $fields = BoxFormFields::render(['box' => new Box($_GET['id'])]);
 
     $page = <<<HTML
-    <form method="post" action="handlers/createUpdateBox.php">
-        {$fields}
-        <input type="submit" value="Save">
-    </form>
+    <input name="id" value="{$_GET['id']}" type="hidden">
+    {$fields}
+    <input type="submit" value="Save">
 HTML;
+
+    $page = Form::render([
+        'action' => 'handlers/createUpdateBox.php',
+        'content' => $page
+    ]);
+
     echo PageWrapper::render([
         'title' => 'Edit box',
         'content' => $page

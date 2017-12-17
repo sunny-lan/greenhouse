@@ -10,13 +10,19 @@ require_once '../include.php';
 (function () {
     $page = new Page($_GET['id']);
     $fields = PageFormFields::render(['page' => $page]);
+    
     $page = <<<HTML
-    <form method="post" action="handlers/createUpdatePage.php" enctype="multipart/form-data">
-        {$fields}
-        <input type="hidden" name="id" value="{$page->getID()}">
-        <input value="Update" type="submit">
-    </form>
+    {$fields}
+    <input type="hidden" name="id" value="{$page->getID()}">
+    <input value="Update" type="submit">
 HTML;
+
+    $page = Form::render([
+        'action' => 'handlers/createUpdatePage.php',
+        'content' => $page,
+        'extendAttr' => 'enctype="multipart/form-data"'
+    ]);
+
     echo PageWrapper::render([
         "title" => "Edit Page",
         "content" => $page

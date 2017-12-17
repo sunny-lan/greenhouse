@@ -12,12 +12,15 @@ require_once '../include.php';
     $fields = BoxPlantEntryFormFields::render(['box' => $box]);
 
     $page = <<<HTML
-    <form method="post" action="handlers/createUpdateBoxPlantEntry.php">
-        <input type="hidden" name="boxID" value="{$box->getID()}">
-        {$fields}
-        <input type="submit" value="Add">
-    </form>
+    <input type="hidden" name="boxID" value="{$box->getID()}">
+    {$fields}
+    <input type="submit" value="Add">
 HTML;
+
+    $page = Form::render([
+        'action' => 'handlers/createUpdateBoxPlantEntry.php',
+        'content' => $page
+    ]);
 
 
     echo PageWrapper::render([

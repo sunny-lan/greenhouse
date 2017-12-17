@@ -1,7 +1,7 @@
 <?php
-
 //todo remove in production
 error_reporting(E_ALL);
+
 ini_set('display_errors', 1);
 define('SUB_DIR', '/greenhouse');
 define('SITE_ROOT', $_SERVER["DOCUMENT_ROOT"] . SUB_DIR . '/');
@@ -27,14 +27,18 @@ require_once SITE_ROOT . 'backend/PageMgr.php';
 
 require_once SITE_ROOT . 'components/Component.php';
 require_once SITE_ROOT . 'components/JSRequire.php';
-require_once SITE_ROOT . 'components/PageWrapper.php';
-require_once SITE_ROOT . 'components/Navbar.php';
-require_once SITE_ROOT . 'components/UserFormFields.php';
-require_once SITE_ROOT . 'components/PageFormFields.php';
-require_once SITE_ROOT . 'components/BoxPlantEntryFormFields.php';
+require_once SITE_ROOT . 'components/Form.php';
 require_once SITE_ROOT . 'components/TimeFilter.php';
 require_once SITE_ROOT . 'components/Map.php';
+require_once SITE_ROOT . 'components/PageWrapper.php';
+require_once SITE_ROOT . 'components/Navbar.php';
+require_once SITE_ROOT . 'components/selectors/BoxSelector.php';
+require_once SITE_ROOT . 'components/selectors/PlantSelector.php';
+require_once SITE_ROOT . 'components/formfields/UserFormFields.php';
+require_once SITE_ROOT . 'components/formfields/PageFormFields.php';
+require_once SITE_ROOT . 'components/formfields/BoxPlantEntryFormFields.php';
+require_once SITE_ROOT . 'components/formfields/BoxFormFields.php';
+require_once SITE_ROOT . 'components/formfields/HarvestFormFields.php';
 require_once SITE_ROOT . 'components/HarvestDisplay.php';
-require_once SITE_ROOT . 'components/BoxFormFields.php';
 
 require_once SITE_ROOT . 'backend/login.php';

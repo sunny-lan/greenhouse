@@ -18,13 +18,14 @@ require_once '../include.php';
         <li>
             {$page->getID()} - {$page->getName()} - 
             <a href="javascript: setPage(['id', '{$page->getID()}'], '../page.php');">view</a> - 
+            <a href="javascript: setPage(['id', '{$page->getID()}', ['raw', true]], '../page.php');">raw</a> - 
             <a href="javascript: setPage(['id', '{$page->getID()}'], 'updatePage.php');">edit</a>
         </li>
 HTML;
 
     $page = <<<HTML
-<ul>{$listHTML}</ul>
-<a href="{$util::linkStr('/admin/createPage.php')}">create</a>
+    <ul>{$listHTML}</ul>
+    <a href="{$util::linkStr('/admin/createPage.php')}">create</a>
 HTML;
 
     echo PageWrapper::render([

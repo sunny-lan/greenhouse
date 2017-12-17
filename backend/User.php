@@ -53,7 +53,7 @@ class User extends DBObject
 
     function setType(string $type)
     {
-//        $myType = $GLOBALS['user']->getType();
+//        $myType = $GLOBALS['userLvl'];
 //        if ($myType != Constants::LVL_ADMIN)
 //            throw new Exception('Not enough perms', Constants::ERR_PERMS);
 

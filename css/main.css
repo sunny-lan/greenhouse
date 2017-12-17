@@ -1,0 +1,19 @@
+body {
+  font-family: 'Open Sans', sans-serif; }
+
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background: gainsboro; }
+
+#content {
+  padding-top: 30px; }
+
+#nav-items-logged-in {
+  position: absolute;
+  right: 0; }
+
+/*# sourceMappingURL=main.css.map */

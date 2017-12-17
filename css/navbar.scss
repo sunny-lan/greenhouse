@@ -12,3 +12,8 @@ $navbar-height: 30px;
 #content {
   padding-top: $navbar-height;
 }
+
+#nav-items-logged-in{
+  position: absolute;
+  right: 0;
+}
