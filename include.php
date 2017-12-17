@@ -3,9 +3,9 @@
 error_reporting(E_ALL);
 
 ini_set('display_errors', 1);
-define('SUB_DIR', '/');
+define('SUB_DIR', '');
 define('SITE_ROOT', $_SERVER["DOCUMENT_ROOT"] . SUB_DIR . '/');
-echo SITE_ROOT;
+
 require_once SITE_ROOT . 'backend/Constants.php';
 require_once SITE_ROOT . 'backend/Util.php';
 require_once SITE_ROOT . 'backend/DBMgr.php';
