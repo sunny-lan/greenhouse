@@ -8,35 +8,47 @@
 
 require_once '../include.php';
 
-(function (){
-$mgr = new UserMgr();
-$currDate = new DateTime();
+(function () {
+	$mgr = new UserMgr();
+	$currDate = new DateTime();
 
-$supervisors = "";
-foreach ($mgr->listUsers() as $user){
-    if($user->getType()==Constants::LVL_SUPERVISOR){
-        $supervisors.=<<<HTML
-        <option value='{$user->getID()}'>{$user->getName()}</option>
+	$match = Constants::LVL_SUPERVISOR;
+	$lbl = "Supervisor: ";
+	if ($GLOBALS['userLvl'] === Constants::LVL_SUPERVISOR) {
+		$match = Constants::LVL_STUDENT;
+		$lbl = "Student: ";
+	}
+
+	$supervisors = "";
+	foreach ($mgr->listUsers() as $user) {
+		if ($user->getType() == $match) {
+			$supervisors .= <<<HTML
+        	<option value='{$user->getID()}'>{$user->getName()}</option>
 HTML;
-    }
+		}
+	}
 
-}
-
-$page = <<<HTML
-    <form method="post" action="handlers/createShift.php">
-    Supervisor: <select name="supervisor">
-    <option value="">unspecified</option>
-    {$supervisors}
-    </select>
-    Activity: <input name="activity">
-    Duration: <input name="hours">hours <input name="minutes">minutes
-    Date completed: <input name="date" value="{$currDate->format('Y-m-d')}">
-    <input type="submit" value="submit">
-</form>
+	$page = <<<HTML
+	<div class="input-row">
+		<label>{$lbl}</label>
+		<select name="supervisor">
+			<option value="">unspecified</option>
+			{$supervisors}
+		</select>
+	</div>
+	<div class="input-row">Activity: <input name="activity"></div>
+	<div class="input-row">Duration: <input name="hours">hours <input name="minutes">minutes</div>
+	<div class="input-row">Date completed: <input name="date" value="{$currDate->format('Y-m-d')}"></div>
+	<input type="submit" value="submit">
 HTML;
 
-echo PageWrapper::render([
-    "title" => "Add shift",
-    "content" => $page
-]);
+	$page = Form::render([
+		'action' => 'handlers/createShift.php',
+		'content' => $page
+	]);
+
+	echo PageWrapper::render([
+		"title" => "Add shift",
+		"content" => $page
+	]);
 })();

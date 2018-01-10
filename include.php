@@ -3,7 +3,7 @@
 error_reporting(E_ALL);
 
 ini_set('display_errors', 1);
-define('SUB_DIR', '');
+define('SUB_DIR', '/greenhouse');
 define('SITE_ROOT', $_SERVER["DOCUMENT_ROOT"] . SUB_DIR . '/');
 
 require_once SITE_ROOT . 'backend/Constants.php';
@@ -31,10 +31,15 @@ require_once SITE_ROOT . 'components/JSRequire.php';
 require_once SITE_ROOT . 'components/Form.php';
 require_once SITE_ROOT . 'components/TimeFilter.php';
 require_once SITE_ROOT . 'components/Map.php';
+require_once SITE_ROOT . 'components/InteractiveMap.php';
+require_once SITE_ROOT . 'components/BoxInfo.php';
 require_once SITE_ROOT . 'components/PageWrapper.php';
 require_once SITE_ROOT . 'components/Navbar.php';
+require_once SITE_ROOT . 'components/links/BoxLinks.php';
+require_once SITE_ROOT . 'components/links/BoxPlantEntryLinks.php';
 require_once SITE_ROOT . 'components/selectors/BoxSelector.php';
 require_once SITE_ROOT . 'components/selectors/PlantSelector.php';
+require_once SITE_ROOT . 'components/selectors/PageSelector.php';
 require_once SITE_ROOT . 'components/formfields/UserFormFields.php';
 require_once SITE_ROOT . 'components/formfields/PageFormFields.php';
 require_once SITE_ROOT . 'components/formfields/BoxPlantEntryFormFields.php';

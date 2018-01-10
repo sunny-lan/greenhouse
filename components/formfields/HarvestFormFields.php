@@ -13,9 +13,7 @@ class HarvestFormFields implements Component
     {
         $util = new Util();
 
-        $harvest = null;
-        if (array_key_exists('harvest', $param))
-            $harvest = $param['harvest'];
+        $harvest = Util::guardA($param, 'harvest');
         /* @var $harvest Harvest */
 
         $box = null;
@@ -28,10 +26,10 @@ class HarvestFormFields implements Component
         $boxSelector = BoxSelector::render(['name' => 'boxID', 'value' => $box]);
 
         $page = <<<HTML
-        Box: {$boxSelector}
-        Description:<input name="description" value="{$util::guard($harvest, 'getDescription')}">
-        Amount (kg):<input name="amount" value="{$util::guard($harvest, 'getAmount')}">
-        Date:<input name="date" value="{$util::guard($harvest, 'getDateHarvested', null, new DateTime())->format('Y-m-d')}">
+        <div class="input-row"> Box: {$boxSelector} </div>
+        <div class="input-row"> Description:<input name="description" value="{$util::guard($harvest, 'getDescription')}"></div>
+        <div class="input-row"> Amount (kg):<input name="amount" value="{$util::guard($harvest, 'getAmount')}"></div>
+        <div class="input-row"> Date:<input name="date" value="{$util::guard($harvest, 'getDateHarvested', null, new DateTime())->format('Y-m-d')}"></div>
 HTML;
         return $page;
     }

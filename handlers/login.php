@@ -6,8 +6,13 @@
  * Time: 3:04 PM
  */
 require_once '../include.php';
-(function() {
+(function () {
     $mgr = new UserMgr();
-    $_SESSION['uid'] = $mgr->login($_POST['username'], $_POST['password'])->getID();
+    try {
+        $_SESSION['uid'] = $mgr->login($_POST['username'], $_POST['password'])->getID();
+    } catch (Exception $e) {
+        $_GET['error'] = 1;
+        Util::redirect(SUB_DIR . '/login.php');
+    }
     Util::returnPrevPage();
 })();

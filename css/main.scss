@@ -1,7 +1,21 @@
-//@import "reset";
+@import "theme";
+@import "reset";
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  background: $page-background;
 }
 
+#content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px;
+}
+
+@import "base";
+@import "forms";
 @import "navbar";
+@import "map";
+@import "admin-base";

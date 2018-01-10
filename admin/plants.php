@@ -9,18 +9,25 @@ require_once '../include.php';
     $plantsList = "";
     foreach ($plants as $plant/* @var $plant Plant */) {
         $plantsList .= <<<HTML
-    <li>
-        {$plant->getPlantName()}
-        <a href="javascript:setPage(['id', '{$plant->getID()}'], 'plant.php')">edit</a>
-    </li>
+		<tr>
+			<td>{$plant->getPlantName()}</td>
+			<td><a href="javascript:setPage(['id', '{$plant->getID()}'], 'plant.php')">edit</a></td>
+		</tr>
 HTML;
     }
 
     $page = <<<HTML
-    <ul>
-        {$plantsList}
-    </ul>
-    <a href="createPlant.php">create</a>
+    <h1 id="title">Plants</h1>
+	<div id="actions"><button onclick="setPage([], 'createPlant.php')">Create</button></div>
+    <div id="data-table">
+		<table>
+			<tr>
+				<th>Name</th>
+				<th>Actions</th>
+			</tr>
+			{$plantsList}
+		</table>
+	</div>
 HTML;
 
     echo PageWrapper::render([

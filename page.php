@@ -16,14 +16,8 @@ require_once 'include.php';
 
     $page = new Page($id);
 
-    if (array_key_exists('raw', $_GET)) {
-        header('Content-Type: ' . $page->getContentType());
-        $page = $page->getContent();
-    } else
-        $page = PageWrapper::render([
-            "title" => $page->getName(),
-            "content" => $page->getContent()
-        ]);
+    header('Content-Type: ' . $page->getContentType());
+    $page = $page->getContent();
 
     echo $page;
 })();

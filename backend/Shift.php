@@ -93,13 +93,4 @@ class Shift extends DBObject
     {
         $this->updateF('status', $status);
     }
-
-
-    //actions
-
-    function delete()
-    {
-        Util::queryW($this->db, "DELETE FROM shifts WHERE id='$this->id'");
-        $this->id = -1;
-    }
 }

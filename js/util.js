@@ -6,19 +6,13 @@
  * @param clearSrc Set to true in order to keep the URL of the last page
  */
 function setPage(pairs, location, clearParams, clearSrc) {
-    if (pairs[0])
+    if (pairs[0] !== undefined)
         if (!Array.isArray(pairs[0]))
             pairs = [pairs];
 
     var l = window.location;
 
     var params = {};
-
-    // inject srcURL into params
-    var realLocation = window.location.protocol + '//' + window.location.host + window.location.pathname;
-    if (!clearSrc && !clearParams)
-        params.srcURL = realLocation;
-    else params.srcURL= location;
 
     if (!clearParams) {
         // get old params from url
@@ -30,6 +24,12 @@ function setPage(pairs, location, clearParams, clearSrc) {
             params[r[1]] = r[2];
         }
     }
+
+	// inject srcURL into params
+	var realLocation = window.location.protocol + '//' + window.location.host + window.location.pathname ;
+	if (!clearSrc && !clearParams)
+		params.srcURL = encodeURIComponent(realLocation+ window.location.hash);
+	else params.srcURL = location;
 
     // inject given params into old params
     for (var pairIdx = 0; pairIdx < pairs.length; pairIdx++) {

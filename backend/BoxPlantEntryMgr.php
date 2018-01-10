@@ -44,8 +44,12 @@ class BoxPlantEntryMgr extends DBMgr
 
     function getLatestDate()
     {
-        return Util::dateSQL2PHP(Util::queryW($this->db,
+        $d1 = Util::dateSQL2PHP(Util::queryW($this->db,
             "SELECT max(end_date) AS latest FROM box_plants"
         )->fetch_assoc()['latest']);
+        $d2 = Util::dateSQL2PHP(Util::queryW($this->db,
+            "SELECT max(start_date) AS latest FROM box_plants"
+        )->fetch_assoc()['latest']);
+        return max($d1,$d2);
     }
 }

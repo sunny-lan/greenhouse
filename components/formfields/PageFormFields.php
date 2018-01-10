@@ -12,24 +12,29 @@ class PageFormFields implements Component
     static function render($param = []): string
     {
         $util = new Util();
-        $consts=new Constants();
 
-        $pageObj = null;
-        if (array_key_exists('page', $param))
-            $pageObj = $param['page'];
-
+        $pageObj = Util::guardA($param, 'page');
 
         $page = <<<HTML
-        Page name: 
-        <input name="name" value="{$util::guard($pageObj, 'getName')}">
-        Content type: 
-        <select name="contentType">
-            <option value="text/plain">Text file</option>
-            <option value="application/pdf">PDF file</option>
-            <option value="text/html">HTML file</option>
-        </select>
-        Select file to upload: 
-        <input name="content" type="file">
+        <div class="input-row">
+            File name: 
+            <input name="name" value="{$util::guard($pageObj, 'getName')}">
+        </div>
+        <div class="input-row">
+            Content type: 
+            <select name="contentType">
+                <option value="">Select one</option>
+                <option value="text/plain">Text file</option>
+                <option value="application/pdf">PDF file</option>
+                <option value="text/html">HTML file</option>
+                <option value="image/png">PNG file</option>
+                <option value="image/jpg">JPG file</option>
+            </select>
+        </div>
+        <div class="input-row">
+            Select file to upload: 
+            <input name="content" type="file">
+        </div>
 HTML;
         return $page;
     }

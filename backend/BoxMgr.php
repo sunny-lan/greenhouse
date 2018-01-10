@@ -13,9 +13,9 @@ class BoxMgr extends DBMgr
         parent::__construct('boxes');
     }
 
-    function createBox(string $description)
+    function createBox(string $description, string $name)
     {
-        Util::queryW($this->db, "INSERT INTO boxes (description) VALUES ('$description')");
+        Util::queryW($this->db, "INSERT INTO boxes (description, name) VALUES ('$description', '$name')");
         return new Box(Util::getLastID($this->db));
     }
 

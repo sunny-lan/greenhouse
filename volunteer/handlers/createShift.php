@@ -18,11 +18,19 @@ require_once '../../include.php';
 
         $shift = $user->createShift($param);
         /* @var $shift Shift */
-        if ($_POST['supervisor'] != "")
-        $shift->setSupervisor(new User($_POST['supervisor']));
+        if ($_POST['other'] != "")
+        $shift->setSupervisor(new User($_POST['other']));
     }
     if ($GLOBALS['userLvl'] == Constants::LVL_SUPERVISOR){
+        $user = $GLOBALS['user'];
+        $param = [
+            'student'=> new User($_POST['other']),
+            'activity' => $_POST['activity'],
+            'duration' => (int)$_POST['hours'] * 60 + (int)$_POST['minutes'],
+            'timeCompleted' => DateTime::createFromFormat('Y-m-d', $_POST['date'])
+        ];
 
+        $shift = $user->createShift($param);
     }
     Util::returnPrevPage();
 })();

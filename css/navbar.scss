@@ -1,4 +1,4 @@
-$navbar-height: 30px;
+@import "theme";
 
 #navbar {
   position: fixed;
@@ -6,14 +6,41 @@ $navbar-height: 30px;
   left: 0;
   right: 0;
   height: $navbar-height;
-  background: gainsboro;
+  background: $navbar-background;
+  z-index: 999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  $side-padding: 10px;
+
+  #nav-items-logged-in {
+    padding-right: $side-padding;
+
+    a {
+      padding: 1px;
+    }
+  }
+
+  a {
+    padding-left: $side-padding;
+    padding-right: $side-padding;
+  }
+
+  #nav-items-always {
+    justify-self: flex-start;
+    padding-left: $side-padding;
+  }
+
+  #nav-title{
+    text-align: center;
+    font-weight: bold;
+    flex-grow: 1;
+  }
 }
 
 #content {
   padding-top: $navbar-height;
-}
-
-#nav-items-logged-in{
-  position: absolute;
-  right: 0;
 }

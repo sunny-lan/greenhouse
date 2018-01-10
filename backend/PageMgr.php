@@ -13,10 +13,18 @@ class PageMgr extends DBMgr
         parent::__construct('pages');
     }
 
-    function createPage($name, $content, $contentType)
+    function createPage($name, $contentFile, $contentType)
     {
         $stmt = $this->db->prepare('INSERT INTO pages (name, content_type, content) VALUES (?, ?, ?)');
-        $stmt->bind_param('sss', $name, $contentType, $content);
+        $null = null;
+        $stmt->bind_param('ssb', $name, $contentType, $null);
+        if ($contentFile !== null) {
+            $fp = fopen($contentFile, "r");
+            while (!feof($fp)) {
+                $stmt->send_long_data(2, fread($fp, 16776192));
+            }
+            fclose($fp);
+        }
         $stmt->execute();
         $stmt->close();
         return new Page(Util::getLastID($this->db));
@@ -24,8 +32,10 @@ class PageMgr extends DBMgr
 
     function findPageByName($name)
     {
-        return new Page(Util::queryW($this->db,
-            "SELECT id FROM pages WHERE name='$name'")->fetch_assoc()['id']);
+        $res = Util::guardA(Util::queryW($this->db,
+            "SELECT id FROM pages WHERE name='$name'")->fetch_assoc(), 'id');
+        if ($res === null) return $res;
+        return new Page($res);
     }
 
     function listPages()

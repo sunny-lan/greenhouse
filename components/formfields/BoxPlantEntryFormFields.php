@@ -13,9 +13,7 @@ class BoxPlantEntryFormFields implements Component
     {
         $util = new Util();
 
-        $selectedBox = null;
-        if (array_key_exists('box', $param))
-            $selectedBox = $param['box'];
+        $selectedBox = Util::guardA($param, 'box');
 
         $entry = null;
         if (array_key_exists('entry', $param)) {
@@ -31,8 +29,18 @@ class BoxPlantEntryFormFields implements Component
         $page = <<<HTML
         Box: {$boxSelector}
         Plant: {$plantSelector}
-        Start date: <input name="startDate" value="{$util::guard($entry, 'getStartDate', null, new DateTime())->format('Y-m-d')}">
-        End date: <input name="endDate" value="{$util::guard($util::guard($entry, 'getEndDate'), 'format', 'Y-m-d')}">
+        <div class="input-row">
+            Start date: 
+            <input name="startDate" value="{$util::guard($entry, 'getStartDate', null, new DateTime())->format('Y-m-d')}">
+        </div>
+        <div class="input-row">
+            End date: 
+            <input name="endDate" value="{$util::guard($util::guard($entry, 'getEndDate'), 'format', 'Y-m-d')}">
+        </div>
+		<div class="input-row">
+            Description: 
+            <textarea name="description">{$util::guard($entry, 'getDescription')}</textarea>
+        </div>
 HTML;
 
         return $page;

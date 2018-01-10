@@ -10,7 +10,12 @@
     require_once '../../include.php';
     if ($GLOBALS['userLvl'] == Constants::LVL_SUPERVISOR) {
         $shift = new shift($_GET['id']);
-        $shift->setStatus(Constants::STATUS_SIGNED);
+        if($shift->getStatus() == Constants::STATUS_UNSIGNED) {
+            $shift->setStatus(Constants::STATUS_SIGNED);
+        }
+        else{
+            $shift->setStatus(Constants::STATUS_UNSIGNED);
+        }
     }
     Util::returnPrevPage();
 })();

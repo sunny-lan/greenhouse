@@ -27,12 +27,20 @@ class Plant extends DBObject
     }
 
 
-    //delete
+    //picture
 
-    function delete()
+    function getPicture()
     {
-        $id = $this->id;
-        Util::queryW($this->db, "DELETE FROM plants WHERE id='$id'");
-        $this->id = -1;
+        $res = $this->selectF('picture_id');
+        if ($res === null) return $res;
+        return new Page($res);
+    }
+
+    function setPicture($p/* @var $p Page */)
+    {
+        if ($p === null)
+            $this->updateF('picture_id', null);
+        else
+            $this->updateF('picture_id', $p->getID());
     }
 }

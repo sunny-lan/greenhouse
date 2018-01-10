@@ -6,14 +6,16 @@ require_once '../include.php';
     $configList = "";
     foreach ($mgr->listNames() as $name) {
         $configList .= <<<HTML
-        {$name}: <input name="{$name}" value="{$mgr->getValue($name)}"/>
-        <br>
+        <div class="input-row">
+            <label>{$name}:</label>
+            <input name="{$name}" value="{$mgr->getValue($name)}"/>
+        </div>
 HTML;
     }
 
     $page = <<<HTML
     {$configList}
-    <input type="submit" value="save"/>
+    <input type="submit" value="Save"/>
 HTML;
 
     $page = Form::render([
@@ -21,6 +23,12 @@ HTML;
         'content' => $page,
         'keepSrc' => true
     ]);
+
+    $page = <<<HTML
+	<h1 id="title">Site configuration</h1>
+	{$page}
+HTML;
+
 
     echo PageWrapper::render([
         'title' => 'Configuration',

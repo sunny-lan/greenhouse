@@ -47,14 +47,20 @@ HTML;
         }
 
         return <<<HTML
-        <a href='javascript: setFilter();'>all</a>
-        {$filterLinks}
-        <a href="javascript: setFilter('{$today}', '{$today}');">Today</a>
-        <form action="" method="get">
-            Start date: <input name="startDate" value="{$util::guard($startDate, 'format', 'Y-m-d')}">
-            End date: <input name="endDate" value="{$util::guard($endDate, 'format', 'Y-m-d')}">
-            <input type="submit">
-        </form>
+        <div class="time-filter">
+            Filter: <a href='javascript: setFilter();'>all</a>
+            {$filterLinks}
+            <a href="javascript: setFilter('{$today}', '{$today}');">Today</a>
+            <form action="" method="get">
+                <div class="input-row">
+                    Start date: <input name="startDate" value="{$util::guard($startDate, 'format', 'Y-m-d')}">
+                </div>
+                <div class="input-row">
+                    End date: <input name="endDate" value="{$util::guard($endDate, 'format', 'Y-m-d')}">
+                </div>
+                <input type="submit" value="Filter">
+            </form>
+        </div>
 HTML;
 
     }

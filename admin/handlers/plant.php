@@ -10,6 +10,11 @@ require_once '../../include.php';
     if ($GLOBALS['userLvl'] == Constants::LVL_ADMIN) {
         $plant = new Plant($_POST['id']);
         $plant->setPlantName($_POST['name']);
+        if (empty($_POST['picture_id']))
+            $page = null;
+        else
+            $page = new Page($_POST['picture_id']);
+        $plant->setPicture($page);
     }
     Util::returnPrevPage();
 })();

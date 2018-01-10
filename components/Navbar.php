@@ -16,6 +16,8 @@ class Navbar implements Component
 
         $SUB_DIR = SUB_DIR;
 
+        $currDateStr=(new DateTime())->format('Y-m-d');
+
         if (isLoggedIn()) {
             $user = $GLOBALS['user'];
             /* @var $user User */
@@ -26,8 +28,8 @@ class Navbar implements Component
                 <a href="{$util::linkStr("/admin/config.php", true)}">config</a>
                 <a href="{$util::linkStr("/admin/plants.php", true)}">plants</a>
                 <a href="{$util::linkStr("/admin/users.php", true)}">users</a>
-                <a href="{$util::linkStr("/admin/pages.php", true)}">pages</a>
-                <a href="{$util::linkStr("/garden/map.php", true)}">garden</a>
+                <a href="{$util::linkStr("/admin/pages.php", true)}">files</a>
+                <a href="{$util::linkStr("/admin/map.php", true)}">garden</a>
 HTML;
             }
             if ($user->getType() === Constants::LVL_SUPERVISOR) {
@@ -53,15 +55,21 @@ HTML;
         } else {
             //these options are shown only when logged out
             $loggedInOptions = <<<HTML
-            <a href="{$util::linkStr("/login.php", true)}">login</a>
-            <a href="{$util::linkStr("/createUser.php", true)}">create user</a>
+            <a href="{$util::linkStr("/login.php")}">login</a>
+            <a href="{$util::linkStr("/createUser.php")}">create account</a>
 HTML;
         }
 
         //these options are always shown
         return <<<HTML
         <div id="navbar">
-            <a href="{$util::linkStr("/garden/map.php", true)}">garden</a>
+            <span id="nav-items-always">
+                <a href="{$util::linkStr("/", true)}">home/about</a>
+                <a href="javascript: setPage([['startDate','{$currDateStr}'],['endDate','{$currDateStr}']], '{$SUB_DIR}/garden/map.php', true)">garden</a>
+            </span>
+            <span id="nav-title">
+            the greenhouse project
+            </span>
             <span id="nav-items-logged-in">{$loggedInOptions}</span>
         </div>
 HTML;

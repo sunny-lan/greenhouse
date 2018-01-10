@@ -31,8 +31,11 @@ class JSRequire
 
         $requireHTML = "";
         $SUB_DIR = SUB_DIR;
-        foreach ($requires as $require => $enabled)
-            $requireHTML .= "<script src='$SUB_DIR/$require'></script>";
+        foreach ($requires as $require => $enabled) {
+            if (substr($require, 0, 4) !== "http")
+                $require = "$SUB_DIR/$require";
+            $requireHTML .= "<script src='$require'></script>";
+        }
 
 
         if (!array_key_exists('JSRequire_script', $GLOBALS))

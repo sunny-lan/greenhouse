@@ -47,11 +47,23 @@ class Page extends DBObject
         return $this->selectF('content');
     }
 
-    function setContent($content)
+    function setContent($contentFile)
     {
         $stmt = $this->db->prepare('UPDATE pages SET content=? WHERE id=?');
-        $stmt->bind_param('si', $content, $this->id);
+        $null = null;
+        $stmt->bind_param('bs', $null, $this->id);
+        $fp = fopen($contentFile, "r");
+        while (!feof($fp)) {
+            $stmt->send_long_data(0, fread($fp, 16776192));
+        }
+        fclose($fp);
         $stmt->execute();
+        echo mysqli_stmt_error ($stmt);
         $stmt->close();
+    }
+
+    function getLink()
+    {
+        return SUB_DIR . "/page.php?id=" . $this->getID();
     }
 }

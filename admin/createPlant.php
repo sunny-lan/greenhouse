@@ -1,7 +1,12 @@
 <?php require_once '../include.php';
 (function() {
+    $pictureSelect = PageSelector::render([
+        'name' => 'picture_id'
+    ]);
+
     $page = <<<HTML
-    Name: <input name="name">
+    <div class="input-row">Name: <input name="name"></div>
+    <div class="input-row">Plant picture: {$pictureSelect}</div>
     <input type="submit" value="submit">
 HTML;
 

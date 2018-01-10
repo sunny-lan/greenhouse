@@ -28,4 +28,15 @@ class DBObject extends DBMgr
             throw new Exception("Cannot select field on null object", Constants::ERR_NULL);
         Util::updateF($this->db, $this->tableName, $this->id, $fieldName, $value);
     }
+
+
+	//delete
+
+	function delete()
+	{
+		$id = $this->id;
+		$table=$this->tableName;
+		Util::queryW($this->db, "DELETE FROM $table WHERE id='$id'");
+		$this->id = -1;
+	}
 }

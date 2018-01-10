@@ -1,0 +1,106 @@
+@import "theme";
+
+.interactive-map {
+  overflow: auto;
+  position: relative;
+  border: solid 1px $map-border;
+  .loading{
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .interactive-map-inside {
+    opacity: 0;
+    position: relative;
+    transform-origin: top left;
+    .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+    .box {
+      $tile-size: 20px;
+      padding: 5px;
+      background: ghostwhite;
+      .entry {
+        display: inline-block;
+        width: $tile-size;
+        height: $tile-size;
+        margin: 2px;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      }
+      .plant-icons {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        position: relative;
+        .hover-info {
+          display: none;
+          position: absolute;
+          background: $plant-hover;
+          top: $tile-size;
+          opacity: 0;
+          padding: 5px;
+          z-index: 444;
+          transition: opacity 0.2s;
+        }
+        img:hover + .hover-info, .hover-info:hover {
+          display: block;
+          opacity: 1;
+        }
+        img:hover {
+          background: $plant-hover;
+        }
+      }
+      .box-popup-link {
+        color: $box-popup-link;
+      }
+      .box-popup {
+        display: none;
+        overflow-y: scroll;
+      }
+    }
+  }
+
+  .zoom {
+    position: fixed;
+    background: $zoom-control-background;
+    bottom: 0;
+    right: 0;
+    z-index: 555;
+  }
+
+  background: $map-background;
+}
+
+#map-page {
+  display: flex;
+  justify-content: center;
+  //align-items: center;
+  flex-direction: row;
+  width: 100%;
+  #sidebar {
+    min-width: 300px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    //flex-grow: 1;
+    & > * {
+      padding-top: 10px;
+    }
+
+    #map-info {
+      max-width: 300px;
+    }
+  }
+
+  .interactive-map {
+    flex-grow: 1;
+  }
+}

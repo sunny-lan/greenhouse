@@ -16,7 +16,12 @@ HTML;
         'content' => $page
     ]);
 
-    echo PageWrapper::render([
+	$page = <<<HTML
+	<h1 id="title">Edit profile</h1>
+	{$page}
+HTML;
+
+	echo PageWrapper::render([
         "title" => "Edit user",
         "content" => $page
     ]);

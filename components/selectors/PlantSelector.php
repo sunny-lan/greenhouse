@@ -11,13 +11,11 @@ class PlantSelector implements Component
 
     static function render($param = []): string
     {
-        $name = null;
-        if (array_key_exists('name', $param))
-            $name = $param['name'];
+        $name = Util::guardA($param, 'name');
 
-        $selectedID = null;
-        if (array_key_exists('value', $param) && $param['value'] != null)
-            $selectedID = $param['value']->getID();
+        $selectedID = Util::guardA($param,'value');
+        if ($selectedID != null)
+            $selectedID = $selectedID->getID();
 
         $mgr = new PlantMgr();
 

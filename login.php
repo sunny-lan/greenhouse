@@ -2,10 +2,15 @@
 require_once 'include.php';
 (function () {
 
+    $error = "";
+    if (array_key_exists('error', $_GET))
+        $error = 'Invalid login';
+
     $page = <<<HTML
-    username/student id: <input name="username" title="Username"/>
-    password: <input name="password" title="Password" type="password"/>
-    <input type="submit" value="login">
+    <div class="input-row">username/student id: <input name="username" title="Username"/></div>
+    <div class="input-row">password: <input name="password" title="Password" type="password"/></div>
+    <div class="input-row"><span class="error-msg">{$error}</span></div>
+    <input type="submit" value="Login">
 HTML;
 
     $page = Form::render([
@@ -13,7 +18,12 @@ HTML;
         'content' => $page
     ]);
 
-    echo PageWrapper::render([
+	$page = <<<HTML
+	<h1 id="title">Login</h1>
+	{$page}
+HTML;
+
+	echo PageWrapper::render([
         "title" => "Login",
         "content" => $page
     ]);

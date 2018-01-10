@@ -1,19 +1,281 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
 body {
-  font-family: 'Open Sans', sans-serif; }
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background: #eff4ff; }
+
+#content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px; }
+
+ul > li {
+  list-style-type: square;
+  margin-left: 20px; }
+
+h1 {
+  font-size: 30px; }
+
+h2 {
+  font-size: 24px; }
+
+strong {
+  font-weight: bold; }
+
+table {
+  border-collapse: collapse; }
+  table th, table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center; }
+  table th {
+    padding-left: 30px;
+    padding-right: 30px; }
+  table th {
+    background: #1ba1e2;
+    color: white; }
+  table tr:hover {
+    background-color: #f5f5f5; }
+    table tr:hover .hover-info {
+      display: block;
+      opacity: 1; }
+  table tr .hover-info {
+    display: none;
+    background: lightblue;
+    opacity: 0;
+    position: absolute;
+    padding: 5px;
+    z-index: 444;
+    transition: opacity 0.2s; }
+
+.error-msg {
+  color: red; }
+
+.overlay {
+  z-index: 666;
+  display: none;
+  top: 40px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  align-items: center;
+  justify-content: center; }
+  .overlay .overlay-background {
+    background: black;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0; }
+  .overlay .overlay-content {
+    min-width: 400px;
+    z-index: 777;
+    padding: 30px;
+    background: white; }
+    .overlay .overlay-content .box-popup {
+      display: block; }
+
+.overlay.shown {
+  display: flex; }
+
+form {
+  width: 40%;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column; }
+  form .input-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; }
+    form .input-row input, form .input-row select, form .input-row textarea {
+      margin-left: 7px;
+      margin-right: 7px;
+      flex-grow: 1; }
+
+input, select, textarea {
+  margin-bottom: 3.5px;
+  margin-top: 3.5px;
+  padding: 5px; }
+
+textarea {
+  height: 200px; }
+
+input[type=submit], button {
+  max-width: 200px;
+  min-width: 100px;
+  border: none;
+  background: #60a917;
+  color: white;
+  align-self: center;
+  padding: 7px; }
+  input[type=submit]:hover, button:hover {
+    background: #008a00; }
 
 #navbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 30px;
-  background: gainsboro; }
+  height: 40px;
+  background: gainsboro;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row; }
+  #navbar #nav-items-logged-in {
+    padding-right: 10px; }
+    #navbar #nav-items-logged-in a {
+      padding: 1px; }
+  #navbar a {
+    padding-left: 10px;
+    padding-right: 10px; }
+  #navbar #nav-items-always {
+    justify-self: flex-start;
+    padding-left: 10px; }
+  #navbar #nav-title {
+    text-align: center;
+    font-weight: bold;
+    flex-grow: 1; }
 
 #content {
-  padding-top: 30px; }
+  padding-top: 40px; }
 
-#nav-items-logged-in {
-  position: absolute;
-  right: 0; }
+.interactive-map {
+  overflow: auto;
+  position: relative;
+  border: solid 1px black;
+  background: transparent; }
+  .interactive-map .loading {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .interactive-map .interactive-map-inside {
+    opacity: 0;
+    position: relative;
+    transform-origin: top left; }
+    .interactive-map .interactive-map-inside .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0; }
+    .interactive-map .interactive-map-inside .box {
+      padding: 5px;
+      background: ghostwhite; }
+      .interactive-map .interactive-map-inside .box .entry {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin: 2px;
+        background-repeat: no-repeat;
+        background-size: 100% 100%; }
+      .interactive-map .interactive-map-inside .box .plant-icons {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        position: relative; }
+        .interactive-map .interactive-map-inside .box .plant-icons .hover-info {
+          display: none;
+          position: absolute;
+          background: greenyellow;
+          top: 20px;
+          opacity: 0;
+          padding: 5px;
+          z-index: 444;
+          transition: opacity 0.2s; }
+        .interactive-map .interactive-map-inside .box .plant-icons img:hover + .hover-info, .interactive-map .interactive-map-inside .box .plant-icons .hover-info:hover {
+          display: block;
+          opacity: 1; }
+        .interactive-map .interactive-map-inside .box .plant-icons img:hover {
+          background: greenyellow; }
+      .interactive-map .interactive-map-inside .box .box-popup-link {
+        color: #1ba1e2; }
+      .interactive-map .interactive-map-inside .box .box-popup {
+        display: none;
+        overflow-y: scroll; }
+  .interactive-map .zoom {
+    position: fixed;
+    background: #f5f5f5;
+    bottom: 0;
+    right: 0;
+    z-index: 555; }
+
+#map-page {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%; }
+  #map-page #sidebar {
+    min-width: 300px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px; }
+    #map-page #sidebar > * {
+      padding-top: 10px; }
+    #map-page #sidebar #map-info {
+      max-width: 300px; }
+  #map-page .interactive-map {
+    flex-grow: 1; }
+
+#title {
+  margin-bottom: 10px;
+  display: block; }
+
+#actions {
+  margin-bottom: 10px; }
 
 /*# sourceMappingURL=main.css.map */

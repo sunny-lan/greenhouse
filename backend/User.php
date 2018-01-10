@@ -152,9 +152,9 @@ class User extends DBObject
 
     function delete()
     {
-        Util::queryW($this->db, "DELETE FROM users WHERE id='$this->id'");
-        if ($GLOBALS['user']->getID() === $this->id)
-            logout();//todo sketch
-        $this->id = -1;
+        if ($GLOBALS['user']->getID() === $this->id) {
+			parent::delete();
+			logout();
+		  }
     }
 }

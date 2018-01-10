@@ -7,29 +7,45 @@
  */
 require_once '../include.php';
 (function () {
-    JSRequire::req('js/util.js');
-    $util = new Util();
-    $mgr = new PageMgr();
-    $pages = $mgr->listPages();
+	JSRequire::req('js/util.js');
+	$util = new Util();
+	$mgr = new PageMgr();
+	$pages = $mgr->listPages();
 
-    $listHTML = "";
-    foreach ($pages as $page/* @var $page Page */)
-        $listHTML .= <<<HTML
-        <li>
-            {$page->getID()} - {$page->getName()} - 
-            <a href="javascript: setPage(['id', '{$page->getID()}'], '../page.php');">view</a> - 
-            <a href="javascript: setPage(['id', '{$page->getID()}', ['raw', true]], '../page.php');">raw</a> - 
-            <a href="javascript: setPage(['id', '{$page->getID()}'], 'updatePage.php');">edit</a>
-        </li>
+	$listHTML = "";
+	foreach ($pages as $page/* @var $page Page */)
+		$listHTML .= <<<HTML
+        <tr>
+            <td>{$page->getID()}</td>
+           	<td>{$page->getName()}</td>
+            <td><a href="{$page->getLink()}">view</a></td>
+            <td>
+				<a href="javascript: setPage(['id', '{$page->getID()}'], 'updatePage.php');">edit</a>
+				<a href="javascript: setPage(['id', '{$page->getID()}'], 'handlers/deletePage.php');">delete</a>
+            </td>
+        </tr>
 HTML;
 
-    $page = <<<HTML
-    <ul>{$listHTML}</ul>
-    <a href="{$util::linkStr('/admin/createPage.php')}">create</a>
+	$page = <<<HTML
+    <h1 id="title">Files</h1>
+    <div id="actions">
+    	<button onclick="{$util::linkStr('/admin/createPage.php')}">Upload</button>
+	</div>
+	<div id="data-table">
+		<table>
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Link</th>
+				<th>Actions</th>
+			</tr>
+			{$listHTML}
+		</table>
+	</div>	
 HTML;
 
-    echo PageWrapper::render([
-        "title" => "Pages",
-        "content" => $page
-    ]);
+	echo PageWrapper::render([
+		"title" => "Pages",
+		"content" => $page
+	]);
 })();

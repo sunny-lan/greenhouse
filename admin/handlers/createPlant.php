@@ -9,7 +9,9 @@ require_once '../../include.php';
 (function () {
     if ($GLOBALS['userLvl'] == Constants::LVL_ADMIN) {
         $mgr = new PlantMgr();
-        $mgr->createPlant($_POST['name']);
+        $plant = $mgr->createPlant($_POST['name']);
+        if (!empty($_POST['picture_id']))
+            $plant->setPicture(new Page($_POST['picture_id']));
     }
     Util::returnPrevPage();
 })();

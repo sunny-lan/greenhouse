@@ -13,7 +13,12 @@ HTML;
         'content'=>$page
     ]);
 
-    echo PageWrapper::render([
+	$page = <<<HTML
+	<h1 id="title">Create account</h1>
+	{$page}
+HTML;
+
+	echo PageWrapper::render([
         "title" => "Create user",
         "content" => $page
     ]);

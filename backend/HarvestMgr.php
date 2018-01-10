@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: Max
@@ -12,15 +13,16 @@ class HarvestMgr extends DBMgr
         parent::__construct('plants');
     }
 
-    function createHarvest(Box $box,int $amount,dateTime $date)
+    function createHarvest(Box $box, int $amount, DateTime $date)
     {
         $boxID = $box->getID();
-        $date = $date->format('Y-m-d');
-        Util::queryW($this->db, "INSERT INTO plants (box_id,amount,date_harvested) VALUES ('$boxID',$amount,$date)");
+        $date = Util::datePHP2SQL($date);
+        Util::queryW($this->db, "INSERT INTO harvest (box_id, amount, date_harvested) VALUES ('$boxID','$amount','$date')");
         return new Harvest(Util::getLastID($this->db));
     }
 
-    function listHarvests(DateTime $startDate = null, DateTime $endDate = null){
+    function listHarvests(DateTime $startDate = null, DateTime $endDate = null)
+    {
         $query = "SELECT id FROM harvest WHERE 1";
 
         if (isset($endDate)) {
@@ -28,9 +30,9 @@ class HarvestMgr extends DBMgr
             $query .= " AND date_harvested <= '$endDate'";
         }
 
-        if(isset($startDate)){
+        if (isset($startDate)) {
             $startDate = Util::datePHP2SQL($startDate);
-            $query.=" AND date_harvested >= '$startDate'";
+            $query .= " AND date_harvested >= '$startDate'";
         }
 
         $sqlRes = Util::queryW($this->db, $query);

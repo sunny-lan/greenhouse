@@ -10,11 +10,16 @@ require_once '../include.php';
 (function () {
     $fields = PageFormFields::render();
     $page = <<<HTML
-    <form method="post" action="handlers/createUpdatePage.php" enctype="multipart/form-data">
-        {$fields}
-        <input value="Create" type="submit">
-    </form>
+    {$fields}
+    <input value="Upload" type="submit">
 HTML;
+
+    $page = Form::render([
+        'action' => 'handlers/createUpdatePage.php',
+        'content' => $page,
+        'extendAttr' => 'enctype="multipart/form-data"'
+    ]);
+
     echo PageWrapper::render([
         "title" => "Create Page",
         "content" => $page

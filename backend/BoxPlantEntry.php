@@ -39,6 +39,7 @@ class BoxPlantEntry extends DBObject
         $this->updateF('plant_id', $plant->getID());
     }
 
+
     //start date
 
     function getStartDate()
@@ -50,6 +51,7 @@ class BoxPlantEntry extends DBObject
     {
         $this->updateF('start_date', Util::datePHP2SQL($startDate));
     }
+
 
     //end date
 
@@ -65,4 +67,17 @@ class BoxPlantEntry extends DBObject
         else
             $this->updateF('end_date', Util::datePHP2SQL($endDate));
     }
+
+
+	//description
+
+	function getDescription()
+	{
+		return $this->selectF('description');
+	}
+
+	function setDescription($description)
+	{
+		$this->updateF('description', $description);
+	}
 }
