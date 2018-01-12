@@ -2,19 +2,21 @@
 
 class PageWrapper implements Component
 {
-    static function render($param = []): string
-    {
-        JSRequire::req('js/util.js');
+	static function render($param = []): string
+	{
+		JSRequire::req('js/util.js');
 
-        $title=Util::guardA($param, 'title', "Greenhouse Project");
+		$title = Util::guardA($param, 'title', "Greenhouse Project");
 
-        $requireHTML = JSRequire::html();
+		$requireHTML = JSRequire::html();
 
-        $navbar = Navbar::render();
+		$navbar = Navbar::render();
 
-        $SUB_DIR = SUB_DIR;
+		$SUB_DIR = SUB_DIR;
 
-        return <<<HTML
+		$mgr = new ConfigMgr();
+
+		return <<<HTML
         <!DOCTYPE html>
         <html lang="en">
         <head>
@@ -27,8 +29,14 @@ class PageWrapper implements Component
         <body>
         {$navbar}
         <div id="content">{$param['content']}</div>
+        <div id="footer">
+        <span>
+			{$mgr->getValue('Organization name')} | 
+			{$mgr->getValue('Address')} | 
+			{$mgr->getValue('Phone')}
+		</span>
         </body>
         </html>
 HTML;
-    }
+	}
 }

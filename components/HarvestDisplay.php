@@ -72,7 +72,7 @@ HTML;
 			}
 
 			$page = <<<HTML
-			<table>
+			<table class="harvest-display">
 				<tr>
 					<th>Box</th>
 					<th>Kg</th>

@@ -8,10 +8,8 @@
  */
 class Map implements Component
 {
-
 	static function render($param = []): string
 	{
-		$subDir = SUB_DIR;
 		$mgr = new BoxMgr();
 		$boxes = $mgr->listBoxes();
 
@@ -23,28 +21,13 @@ class Map implements Component
 		if (array_key_exists('endDate', $param) and $param['endDate'] !== '')
 			$endDate = $param['endDate'];
 
-
-		$comp = (function (BoxPlantEntry $a, BoxPlantEntry $b) {
-			if ($a->getStartDate() == $b->getStartDate()) {
-				if ($a->getPlant()->getID() == $b->getPlant()->getID()) {
-					return 0;
-				} else if ($a->getPlant()->getID() > $b->getPlant()->getID()) {
-					return 1;
-				} else {
-					return -1;
-				}
-			} else if ($a->getStartDate() < $b->getStartDate()) {
-				return 1;
-			} else {
-				return -1;
-			}
-		});
+		$subDir = SUB_DIR;
 
 		$boxHTML = "";
 		foreach ($boxes as $box/* @var $box Box */) {
 			$plantHTML = "";
 			$boxPlants = $box->listPlantEntries($startDate, $endDate);
-			usort($boxPlants, $comp);
+			usort($boxPlants, BoxPlantEntryMgr::getComp());
 			foreach ($boxPlants as $entry/* @var $entry BoxPlantEntry */) {
 				$plantEndDate = $entry->getEndDate();
 

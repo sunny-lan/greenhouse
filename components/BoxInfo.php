@@ -21,8 +21,10 @@ class BoxInfo implements Component
 		$harvests = $box->listHarvests($startDate, $endDate);
 		$harvestHTML = HarvestDisplay::render(['harvests' => $harvests]);
 
+		$entries = $box->listPlantEntries($startDate, $endDate);
+		usort($entries, BoxPlantEntryMgr::getComp());
 		$entriesHTML = '';
-		foreach ($box->listPlantEntries($startDate, $endDate) as $entry/* @var $entry BoxPlantEntry */) {
+		foreach ($entries as $entry/* @var $entry BoxPlantEntry */) {
 			$plantEndDate = $entry->getEndDate();
 
 			$endStr = '';
@@ -36,16 +38,15 @@ class BoxInfo implements Component
 			$descriptionHTML = '';
 			if (!empty($entry->getDescription()))
 				$descriptionHTML = <<<HTML
-				Notes:
 				<pre>{$entry->getDescription()}</pre>
 HTML;
 
 
 			$entriesHTML .= <<<HTML
                 <li>
-                    {$entry->getPlant()->getPlantName()} 
+                    <strong>{$entry->getPlant()->getPlantName()} 
                     starting {$entry->getStartDate()->format('Y-m-d')}
-                    {$endStr}
+                    {$endStr}</strong>
                     {$adminHTML}
                     {$descriptionHTML}
                 </li>
@@ -59,13 +60,21 @@ HTML;
 			$adminHTML = BoxLinks::render($param);
 
 		return <<<HTML
-		<h1>{$box->getName()}</h1>
-		{$adminHTML}
-		<pre>{$box->getDescription()}</pre>
-		<h2>Plant entries</h2>
-		<ul>{$entriesHTML}</ul>
-		<h2>Harvests</h2>
-		{$harvestHTML}
+		<div class="box-info">
+			<div class="title">
+				<h1>{$box->getName()}</h1>
+				{$adminHTML}
+			</div>
+			<pre>{$box->getDescription()}</pre>
+			<div class="plant-entries">
+				<h2>Plant entries</h2>
+				<ul>{$entriesHTML}</ul>
+			</div>
+			<div class="harvests">
+				<h2>Harvests</h2>
+				{$harvestHTML}
+			</div>
+		</div>
 HTML;
 	}
 }

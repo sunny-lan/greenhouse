@@ -1,0 +1,32 @@
+@import "theme";
+@import "mixins";
+
+.box-info {
+  .title {
+    margin-bottom: 5px;
+  }
+  pre {
+    @include word-wrap;
+    padding: 5px;
+    border: $note-border;
+    background: $note-background;
+    max-width: 500px;
+  }
+
+  .plant-entries{
+    margin-top: 10px;
+    ul > li{
+      margin-bottom: 5px;
+    }
+  }
+
+  .harvests{
+    margin-top: 10px;
+    h2{
+      margin-bottom: 2px;
+    }
+    .harvest-display{
+      width: 100%;
+    }
+  }
+}

@@ -4,6 +4,8 @@
 body {
   font-family: 'Raleway', sans-serif;
   background: $page-background;
+  position: relative;
+  min-height: 100vh;
 }
 
 #content {
@@ -11,7 +13,24 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 10px;
+}
+
+#footer{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $footer-background;
+  color: white;
+  z-index: -1;
+  height: $footer-height;
+}
+
+#content{
+  padding-bottom: $footer-height;
 }
 
 @import "base";

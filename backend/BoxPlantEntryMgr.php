@@ -52,4 +52,23 @@ class BoxPlantEntryMgr extends DBMgr
         )->fetch_assoc()['latest']);
         return max($d1,$d2);
     }
+
+	static function getComp()
+	{
+		return (function (BoxPlantEntry $a, BoxPlantEntry $b) {
+			if ($a->getStartDate() == $b->getStartDate()) {
+				if ($a->getPlant()->getID() == $b->getPlant()->getID()) {
+					return 0;
+				} else if ($a->getPlant()->getID() > $b->getPlant()->getID()) {
+					return 1;
+				} else {
+					return -1;
+				}
+			} else if ($a->getStartDate() < $b->getStartDate()) {
+				return 1;
+			} else {
+				return -1;
+			}
+		});
+	}
 }

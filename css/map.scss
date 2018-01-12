@@ -1,9 +1,10 @@
 @import "theme";
+@import "mixins";
 
 .interactive-map {
   overflow: auto;
   position: relative;
-  border: solid 1px $map-border;
+  border: $map-border;
   .loading{
     position: absolute;
     z-index: -1;
@@ -78,18 +79,23 @@
   background: $map-background;
 }
 
+@import "box-info";
+
 #map-page {
   display: flex;
   justify-content: center;
   //align-items: center;
   flex-direction: row;
   width: 100%;
+  max-width: 100%;
+  @include box-sizing(border-box);
+  padding: 10px 12px;
   #sidebar {
     min-width: 300px;
-    max-height: 90vh;
+    //overflow-y: scroll;
     display: flex;
     flex-direction: column;
-    margin-right: 20px;
+    margin-right: 10px;
     //flex-grow: 1;
     & > * {
       padding-top: 10px;

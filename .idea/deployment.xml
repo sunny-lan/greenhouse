@@ -17,6 +17,10 @@
           <excludedPaths>
             <excludedPath local="true" path="$PROJECT_DIR$/todo list.md" />
             <excludedPath local="true" path="$PROJECT_DIR$/backend/config.ini" />
+            <excludedPath local="true" path="$PROJECT_DIR$/vendor" />
+            <excludedPath local="true" path="$PROJECT_DIR$/composer.json" />
+            <excludedPath local="true" path="$PROJECT_DIR$/composer.lock" />
+            <excludedPath local="true" path="$PROJECT_DIR$/.gitignore" />
           </excludedPaths>
         </serverdata>
       </paths>

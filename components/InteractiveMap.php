@@ -10,10 +10,6 @@ class InteractiveMap implements Component
 {
 	static function render($param = []): string
 	{
-		JSRequire::req('https://code.jquery.com/jquery-3.2.1.min.js');
-		JSRequire::req('js/map.js');
-
-		$subDir = SUB_DIR;
 		$mgr = new BoxMgr();
 		$boxes = $mgr->listBoxes();
 
@@ -25,29 +21,15 @@ class InteractiveMap implements Component
 		if (array_key_exists('endDate', $param) and $param['endDate'] !== '')
 			$endDate = $param['endDate'];
 
-		$comp = (function (BoxPlantEntry $a, BoxPlantEntry $b) {
-			if ($a->getStartDate() == $b->getStartDate()) {
-				if ($a->getPlant()->getID() == $b->getPlant()->getID()) {
-					return 0;
-				} else if ($a->getPlant()->getID() > $b->getPlant()->getID()) {
-					return 1;
-				} else {
-					return -1;
-				}
-			} else if ($a->getStartDate() < $b->getStartDate()) {
-				return 1;
-			} else {
-				return -1;
-			}
-		});
-
+		JSRequire::req('https://code.jquery.com/jquery-3.2.1.min.js');
+		JSRequire::req('js/map.js');
 		$util = new Util();
 
 		$boxHTML = "";
 		foreach ($boxes as $box/* @var $box Box */) {
 			$plantHTML = "";
 			$boxPlants = $box->listPlantEntries($startDate, $endDate);
-			usort($boxPlants, $comp);
+			usort($boxPlants, BoxPlantEntryMgr::getComp());
 			foreach ($boxPlants as $entry/* @var $entry BoxPlantEntry */) {
 				$picture = $entry->getPlant()->getPicture();
 

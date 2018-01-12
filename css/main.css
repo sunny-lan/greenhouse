@@ -47,14 +47,31 @@ table {
 
 body {
   font-family: 'Raleway', sans-serif;
-  background: #eff4ff; }
+  background: #f5f5f5;
+  position: relative;
+  min-height: 100vh; }
 
 #content {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  margin: 10px; }
+  flex-direction: column; }
+
+#footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #566D4F;
+  color: white;
+  z-index: -1;
+  height: 40px; }
+
+#content {
+  padding-bottom: 40px; }
 
 ul > li {
   list-style-type: square;
@@ -65,6 +82,12 @@ h1 {
 
 h2 {
   font-size: 24px; }
+
+h3 {
+  font-size: 20px; }
+
+h4 {
+  font-weight: bold; }
 
 strong {
   font-weight: bold; }
@@ -101,7 +124,7 @@ table {
 .overlay {
   z-index: 666;
   display: none;
-  top: 40px;
+  top: 80px;
   left: 0;
   bottom: 0;
   right: 0;
@@ -117,6 +140,7 @@ table {
     bottom: 0;
     right: 0; }
   .overlay .overlay-content {
+    max-height: 90vh;
     min-width: 400px;
     z-index: 777;
     padding: 30px;
@@ -128,7 +152,6 @@ table {
   display: flex; }
 
 form {
-  width: 40%;
   min-width: 300px;
   display: flex;
   flex-direction: column; }
@@ -166,20 +189,26 @@ input[type=submit], button {
   top: 0;
   left: 0;
   right: 0;
-  height: 40px;
-  background: gainsboro;
+  height: 80px;
+  background: white;
   z-index: 999;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row; }
+  flex-direction: row;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); }
   #navbar #nav-items-logged-in {
-    padding-right: 10px; }
+    padding-right: 20px; }
     #navbar #nav-items-logged-in a {
       padding: 1px; }
   #navbar a {
     padding-left: 10px;
-    padding-right: 10px; }
+    padding-right: 10px;
+    text-decoration: none;
+    color: #1ba1e2; }
+    #navbar a:hover {
+      text-decoration: underline;
+      font-weight: bold; }
   #navbar #nav-items-always {
     justify-self: flex-start;
     padding-left: 10px; }
@@ -189,13 +218,13 @@ input[type=submit], button {
     flex-grow: 1; }
 
 #content {
-  padding-top: 40px; }
+  padding-top: 80px; }
 
 .interactive-map {
   overflow: auto;
   position: relative;
-  border: solid 1px black;
-  background: transparent; }
+  border: none;
+  background: white; }
   .interactive-map .loading {
     position: absolute;
     z-index: -1;
@@ -253,17 +282,47 @@ input[type=submit], button {
     right: 0;
     z-index: 555; }
 
+.box-info .title {
+  margin-bottom: 5px; }
+.box-info pre {
+  white-space: pre-wrap;
+  /* css-3 */
+  white-space: -moz-pre-wrap;
+  /* Mozilla, since 1999 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */
+  padding: 5px;
+  border: none;
+  background: #f5f5f5;
+  max-width: 500px; }
+.box-info .plant-entries {
+  margin-top: 10px; }
+  .box-info .plant-entries ul > li {
+    margin-bottom: 5px; }
+.box-info .harvests {
+  margin-top: 10px; }
+  .box-info .harvests h2 {
+    margin-bottom: 2px; }
+  .box-info .harvests .harvest-display {
+    width: 100%; }
+
 #map-page {
   display: flex;
   justify-content: center;
   flex-direction: row;
-  width: 100%; }
+  width: 100%;
+  max-width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px 12px; }
   #map-page #sidebar {
     min-width: 300px;
-    max-height: 90vh;
     display: flex;
     flex-direction: column;
-    margin-right: 20px; }
+    margin-right: 10px; }
     #map-page #sidebar > * {
       padding-top: 10px; }
     #map-page #sidebar #map-info {
@@ -272,6 +331,7 @@ input[type=submit], button {
     flex-grow: 1; }
 
 #title {
+  margin-top: 20px;
   margin-bottom: 10px;
   display: block; }
 

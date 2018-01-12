@@ -15,7 +15,15 @@ h2 {
   font-size: 24px;
 }
 
-strong {
+h3{
+  font-size: 20px;
+}
+
+h4{
+  font-weight: bold;
+}
+
+strong{
   font-weight: bold;
 }
 
@@ -78,6 +86,7 @@ table {
     right: 0;
   }
   .overlay-content {
+    max-height: 90vh;
     min-width: 400px;
     z-index: 777;
     padding: 30px;
