@@ -22,6 +22,7 @@ class InteractiveMap implements Component
 			$endDate = $param['endDate'];
 
 		JSRequire::req('https://code.jquery.com/jquery-3.2.1.min.js');
+		JSRequire::req('js/overlay.js');
 		JSRequire::req('js/map.js');
 		$util = new Util();
 
@@ -73,7 +74,7 @@ HTML;
             <div id="box-{$box->getID()}" class="box" data-rect='{$converted}'>
                 <h2>{$box->getName()}<a class="box-popup-link">...</a></h2>
                	<div class="plant-icons">{$plantHTML}</div>
-				<div class="box-popup">
+				<div class="popup-content box-popup">
 					{$popupHTML}
 				</div>
 				<div class="controls">{$adminHTML}</div>

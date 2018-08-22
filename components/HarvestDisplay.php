@@ -10,6 +10,7 @@ class HarvestDisplay implements Component
 {
 	static function render($param = []): string
 	{
+		$SUB_DIR=SUB_DIR;
 		$startDate = null;
 		if (array_key_exists('startDate', $param) and $param['startDate'] !== '')
 			$startDate = $param['startDate'];
@@ -62,7 +63,7 @@ class HarvestDisplay implements Component
 HTML;
 				if ($GLOBALS['userLvl'] == Constants::LVL_ADMIN) {
 					$harvestHTML .= <<<HTML
-                	<td><a href="javascript:setPage(['id', '{$harvest->getID()}'], '../admin/updateHarvest.php')">edit</a></td>
+                	<td><a href="javascript:setPage(['id', '{$harvest->getID()}'], '{$SUB_DIR}/admin/updateHarvest.php')">edit</a></td>
 HTML;
 				}
 
@@ -90,7 +91,7 @@ HTML;
 
 		if ($GLOBALS['userLvl'] == Constants::LVL_ADMIN) {
 			$page .= <<<HTML
-			<a href="javascript:setPage([], '../admin/createHarvest.php')">add harvest</a>
+			<a href="javascript:setPage([], '{$SUB_DIR}/admin/createHarvest.php')">add harvest</a>
 HTML;
 		}
 

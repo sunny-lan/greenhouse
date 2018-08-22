@@ -23,6 +23,11 @@ HTML;
         'extendAttr' => 'enctype="multipart/form-data"'
     ]);
 
+	$page = <<<HTML
+	<h1 id="title">Edit file</h1>
+    {$page}
+HTML;
+
     echo PageWrapper::render([
         "title" => "Edit Page",
         "content" => $page

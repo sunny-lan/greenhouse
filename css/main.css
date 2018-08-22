@@ -68,10 +68,12 @@ body {
   background: #566D4F;
   color: white;
   z-index: -1;
-  height: 40px; }
+  height: 20px;
+  font-size: 11px;
+  letter-spacing: 1px; }
 
 #content {
-  padding-bottom: 40px; }
+  padding-bottom: 20px; }
 
 ul > li {
   list-style-type: square;
@@ -105,7 +107,7 @@ table {
     background: #1ba1e2;
     color: white; }
   table tr:hover {
-    background-color: #f5f5f5; }
+    background-color: #f0f0f0; }
     table tr:hover .hover-info {
       display: block;
       opacity: 1; }
@@ -132,24 +134,24 @@ table {
   align-items: center;
   justify-content: center; }
   .overlay .overlay-background {
-    background: black;
-    opacity: 0.5;
+    background: rgba(0, 0, 0, 0.7);
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0; }
   .overlay .overlay-content {
-    max-height: 90vh;
-    min-width: 400px;
+    max-height: calc(100vh - 80px - 20px);
     z-index: 777;
-    padding: 30px;
-    background: white; }
-    .overlay .overlay-content .box-popup {
+    overflow-y: auto; }
+    .overlay .overlay-content .popup-content {
       display: block; }
 
 .overlay.shown {
   display: flex; }
+
+.popup-content {
+  display: none; }
 
 form {
   min-width: 300px;
@@ -224,6 +226,7 @@ input[type=submit], button {
   overflow: auto;
   position: relative;
   border: none;
+  height: calc(100vh - 80px - 20px);
   background: white; }
   .interactive-map .loading {
     position: absolute;
@@ -272,15 +275,17 @@ input[type=submit], button {
           background: greenyellow; }
       .interactive-map .interactive-map-inside .box .box-popup-link {
         color: #1ba1e2; }
-      .interactive-map .interactive-map-inside .box .box-popup {
-        display: none;
-        overflow-y: scroll; }
   .interactive-map .zoom {
     position: fixed;
     background: #f5f5f5;
     bottom: 0;
     right: 0;
     z-index: 555; }
+
+.box-popup {
+  min-width: 400px;
+  padding: 30px;
+  background: white; }
 
 .box-info .title {
   margin-bottom: 5px; }
@@ -320,6 +325,7 @@ input[type=submit], button {
   padding: 10px 12px; }
   #map-page #sidebar {
     min-width: 300px;
+    flex-shrink: 0;
     display: flex;
     flex-direction: column;
     margin-right: 10px; }
@@ -330,12 +336,66 @@ input[type=submit], button {
   #map-page .interactive-map {
     flex-grow: 1; }
 
+#pictures {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  justify-content: center;
+  align-items: center; }
+  #pictures .picture-tile {
+    display: inline-block;
+    width: 400px;
+    height: 400px;
+    margin: 10px;
+    position: relative;
+    transition: transform 0.2s ease-in-out; }
+    #pictures .picture-tile .picture {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0; }
+    #pictures .picture-tile .loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: white;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1; }
+    #pictures .picture-tile .description-block {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 111;
+      min-height: 33%;
+      opacity: 0;
+      transition: opacity 0.2s;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    #pictures .picture-tile:hover {
+      transform: scale(1.02); }
+      #pictures .picture-tile:hover .description-block {
+        opacity: 1; }
+
 #title {
   margin-top: 20px;
   margin-bottom: 10px;
   display: block; }
 
 #actions {
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 /*# sourceMappingURL=main.css.map */

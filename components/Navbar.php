@@ -25,11 +25,12 @@ class Navbar implements Component
             if ($user->getType() === Constants::LVL_ADMIN) {
                 //these options are shown only if current user is admin
                 $specificOptions .= <<<HTML
-                <a href="{$util::linkStr("/admin/config.php", true)}">config</a>
                 <a href="{$util::linkStr("/admin/plants.php", true)}">plants</a>
+                <a href="{$util::linkStr("/admin/map.php", true)}">garden</a>
+                <a href="{$util::linkStr("/admin/pictures.php", true)}">gallery</a>
+                <a href="{$util::linkStr("/admin/config.php", true)}">config</a>
                 <a href="{$util::linkStr("/admin/users.php", true)}">users</a>
                 <a href="{$util::linkStr("/admin/pages.php", true)}">files</a>
-                <a href="{$util::linkStr("/admin/map.php", true)}">garden</a>
 HTML;
             }
             if ($user->getType() === Constants::LVL_SUPERVISOR) {
@@ -64,8 +65,9 @@ HTML;
         return <<<HTML
         <div id="navbar">
             <span id="nav-items-always">
-                <a href="{$util::linkStr("/", true)}">home/about</a>
-                <a href="javascript: setPage([['startDate','{$currDateStr}'],['endDate','{$currDateStr}']], '{$SUB_DIR}/garden/map.php', true)">garden</a>
+                <a href="{$util::linkStr("/", true)}">about</a>
+                <a href="javascript: setPage([['startDate','{$currDateStr}'],['endDate','{$currDateStr}']], '{$SUB_DIR}/garden.php', true)">garden</a>
+                <a href="{$util::linkStr("/gallery.php", true)}">gallery</a>
             </span>
             <span id="nav-title">
             the greenhouse project

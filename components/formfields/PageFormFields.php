@@ -24,11 +24,12 @@ class PageFormFields implements Component
             Content type: 
             <select name="contentType">
                 <option value="">Select one</option>
-                <option value="text/plain">Text file</option>
-                <option value="application/pdf">PDF file</option>
-                <option value="text/html">HTML file</option>
-                <option value="image/png">PNG file</option>
-                <option value="image/jpg">JPG file</option>
+                <option value="text/plain">Text</option>
+                <option value="application/pdf">PDF</option>
+                <option value="text/html">HTML</option>
+                <option value="image/png">PNG</option>
+                <option value="image/jpg">JPG</option>
+                <option value="image/svg+xml">SVG</option>
             </select>
         </div>
         <div class="input-row">

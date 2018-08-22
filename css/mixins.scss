@@ -10,3 +10,12 @@
   -moz-box-sizing: $box-model; // Firefox <= 19
   box-sizing: $box-model;
 }
+
+@mixin fill-container-absolute($z:0) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: $z;
+}

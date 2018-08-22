@@ -19,7 +19,7 @@ class PageSelector implements Component
 
         $mgr = new PageMgr();
         $pageOptions = "";
-        foreach ($mgr->listPages() as $page/* @var $page Page */) {
+        foreach ($mgr->listPages(Util::guardA($param, 'filter')) as $page/* @var $page Page */) {
             $selected = "";
             if ($selectedID === $page->getID())
                 $selected = "selected='selected'";

@@ -23,7 +23,7 @@ class HarvestFormFields implements Component
         if (array_key_exists('box', $param))
             $box = $param['box'];
 
-        $boxSelector = BoxSelector::render(['name' => 'boxID', 'value' => $box]);
+        $boxSelector = UserSelector::render(['name' => 'boxID', 'value' => $box]);
 
         $page = <<<HTML
         <div class="input-row"> Box: {$boxSelector} </div>

@@ -22,6 +22,10 @@ HTML;
         'content' => $page
     ]);
 
+	$page = <<<HTML
+	<h1 id="title">Add entry</h1>
+    {$page}
+HTML;
 
     echo PageWrapper::render([
         "title" => "Add entry",

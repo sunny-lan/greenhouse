@@ -15,13 +15,13 @@ class PageWrapper implements Component
 		$SUB_DIR = SUB_DIR;
 
 		$mgr = new ConfigMgr();
-
+		//test comment
 		return <<<HTML
         <!DOCTYPE html>
         <html lang="en">
         <head>
             <meta charset="UTF-8">
-            <title>{$title}</title>
+            <title>{$title}eee</title>
             <link href="https://fonts.googleapis.com/css?family=Raleway:400" rel="stylesheet">
             <link rel="stylesheet" href="{$SUB_DIR}/css/main.css">
             {$requireHTML}

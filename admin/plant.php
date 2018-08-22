@@ -5,7 +5,8 @@ require_once '../include.php';
 
     $pictureSelect = PageSelector::render([
         'name' => 'picture_id',
-        'value' => $plant->getPicture()
+        'value' => $plant->getPicture(),
+		'filter'=>"'image/png', 'image/jpg', 'image/svg+xml'"
     ]);
 
     $page = <<<HTML
@@ -23,6 +24,11 @@ HTML;
         'action' => 'handlers/plant.php',
         'content' => $page
     ]);
+
+	$page = <<<HTML
+	<h1 id="title">Edit Plant</h1>
+    {$page}
+HTML;
 
     echo PageWrapper::render([
         'title' => $plant->getPlantName(),

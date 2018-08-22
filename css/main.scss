@@ -27,6 +27,8 @@ body {
   color: white;
   z-index: -1;
   height: $footer-height;
+  font-size: $footer-font-size;
+  letter-spacing: 1px;
 }
 
 #content{
@@ -37,4 +39,5 @@ body {
 @import "forms";
 @import "navbar";
 @import "map";
+@import "gallery";
 @import "admin-base";

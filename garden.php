@@ -1,5 +1,5 @@
 <?php
-require_once '../include.php';
+require_once 'include.php';
 (function () {
     $param = [];
     if (array_key_exists('startDate', $_GET) and $_GET['startDate'] !== '')

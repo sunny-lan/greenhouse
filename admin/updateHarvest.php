@@ -23,6 +23,11 @@ HTML;
         'content' => $page
     ]);
 
+	$page = <<<HTML
+	<h1 id="title">Edit harvest</h1>
+    {$page}
+HTML;
+
     echo PageWrapper::render([
         "title" => "Edit harvest",
         "content" => $page

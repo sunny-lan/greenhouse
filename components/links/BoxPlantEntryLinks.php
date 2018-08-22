@@ -14,8 +14,8 @@ class BoxPlantEntryLinks implements Component
 		$subDir = SUB_DIR;
 		$entry = $param['entry'];
 		return <<<HTML
-                    - <a href="javascript:setPage(['id', '{$entry->getID()}'], '{$subDir}/admin/updateBoxPlantEntry.php',0,1)">edit</a>
-                    <a href="javascript:setPage(['id', '{$entry->getID()}'], '{$subDir}/admin/handlers/deleteBoxPlantEntry.php',0,1)">delete</a>
+                    - <a href="javascript:setPage(['id', '{$entry->getID()}'], '{$subDir}/admin/updateBoxPlantEntry.php')">edit</a>
+                    <a href="javascript:setPage(['id', '{$entry->getID()}'], '{$subDir}/admin/handlers/deleteBoxPlantEntry.php')">delete</a>
 HTML;
 	}
 }

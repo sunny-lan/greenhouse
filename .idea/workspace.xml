@@ -1,33 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="95e7caa1-4469-4237-8b20-0c2d404e3fc7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/gallery.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/Picture.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/PictureMgr.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/box-info.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/mixins.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Greenhouse.iml" afterPath="$PROJECT_DIR$/.idea/Greenhouse.iml" />
+    <list default="true" id="95e7caa1-4469-4237-8b20-0c2d404e3fc7" name="Default" comment="Made stuff aesthetic">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/addPicture.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/handlers/addUpdatePicture.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/handlers/removePicture.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/pictures.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/updatePicture.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/components/formfields/PictureFormFields.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/components/selectors/UserSelector.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/gallery.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gallery.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/gallery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/overlay.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/gallery.php" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/garden/map.php" afterPath="$PROJECT_DIR$/garden.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/BoxPlantEntryMgr.php" afterPath="$PROJECT_DIR$/backend/BoxPlantEntryMgr.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/createBoxPlantEntry.php" afterPath="$PROJECT_DIR$/admin/createBoxPlantEntry.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/createPage.php" afterPath="$PROJECT_DIR$/admin/createPage.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/createPlant.php" afterPath="$PROJECT_DIR$/admin/createPlant.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/pages.php" afterPath="$PROJECT_DIR$/admin/pages.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/plant.php" afterPath="$PROJECT_DIR$/admin/plant.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/updateBox.php" afterPath="$PROJECT_DIR$/admin/updateBox.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/updateBoxPlantEntry.php" afterPath="$PROJECT_DIR$/admin/updateBoxPlantEntry.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/updateHarvest.php" afterPath="$PROJECT_DIR$/admin/updateHarvest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/updatePage.php" afterPath="$PROJECT_DIR$/admin/updatePage.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/PageMgr.php" afterPath="$PROJECT_DIR$/backend/PageMgr.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/Picture.php" afterPath="$PROJECT_DIR$/backend/Picture.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/PictureMgr.php" afterPath="$PROJECT_DIR$/backend/PictureMgr.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/BoxInfo.php" afterPath="$PROJECT_DIR$/components/BoxInfo.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/HarvestDisplay.php" afterPath="$PROJECT_DIR$/components/HarvestDisplay.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/InteractiveMap.php" afterPath="$PROJECT_DIR$/components/InteractiveMap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/Map.php" afterPath="$PROJECT_DIR$/components/Map.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/Navbar.php" afterPath="$PROJECT_DIR$/components/Navbar.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/PageWrapper.php" afterPath="$PROJECT_DIR$/components/PageWrapper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/formfields/BoxPlantEntryFormFields.php" afterPath="$PROJECT_DIR$/components/formfields/BoxPlantEntryFormFields.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/formfields/HarvestFormFields.php" afterPath="$PROJECT_DIR$/components/formfields/HarvestFormFields.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/formfields/PageFormFields.php" afterPath="$PROJECT_DIR$/components/formfields/PageFormFields.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/links/BoxPlantEntryLinks.php" afterPath="$PROJECT_DIR$/components/links/BoxPlantEntryLinks.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/selectors/PageSelector.php" afterPath="$PROJECT_DIR$/components/selectors/PageSelector.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/admin-base.scss" afterPath="$PROJECT_DIR$/css/admin-base.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/base.scss" afterPath="$PROJECT_DIR$/css/base.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/forms.scss" afterPath="$PROJECT_DIR$/css/forms.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css.map" afterPath="$PROJECT_DIR$/css/main.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.scss" afterPath="$PROJECT_DIR$/css/main.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/map.scss" afterPath="$PROJECT_DIR$/css/map.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/navbar.scss" afterPath="$PROJECT_DIR$/css/navbar.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/mixins.scss" afterPath="$PROJECT_DIR$/css/mixins.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/theme.scss" afterPath="$PROJECT_DIR$/css/theme.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include.php" afterPath="$PROJECT_DIR$/include.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/map.js" afterPath="$PROJECT_DIR$/js/map.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volunteer/add_shift.php" afterPath="$PROJECT_DIR$/volunteer/add_shift.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volunteer/shifts.php" afterPath="$PROJECT_DIR$/volunteer/shifts.php" />
     </list>
     <ignored path="todo list.md" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,111 +84,43 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="navbar.scss" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/css/navbar.scss">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+            <state relative-caret-position="200">
+              <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin-base.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/admin-base.scss">
+      <file leaf-file-name="include.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/include.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+            <state relative-caret-position="125">
+              <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/login.php">
+      <file leaf-file-name="Page.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/Page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="theme.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/theme.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="forms.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/forms.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="28" column="16" lean-forward="false" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/main.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="25" column="32" lean-forward="false" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="map.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/garden/map.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="29" column="15" lean-forward="true" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
+            <state relative-caret-position="225">
+              <caret line="18" column="34" lean-forward="false" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
               <folding>
-                <marker date="1515442841486" expanded="true" signature="705:1205" ph="..." />
-                <marker date="1515442841486" expanded="true" signature="732:1179" ph="..." />
-                <marker date="1515442841486" expanded="true" signature="801:1089" ph="..." />
+                <marker date="1513710804612" expanded="true" signature="788:825" ph="UPDATE pages... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PageWrapper.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/PageWrapper.php">
+      <file leaf-file-name="Util.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/Util.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-              <folding>
-                <marker date="1515724458708" expanded="true" signature="376:942" ph="..." />
-                <marker date="1515724458708" expanded="true" signature="391:667" ph="..." />
-                <marker date="1515724458708" expanded="true" signature="682:926" ph="..." />
-                <marker date="1515724458708" expanded="true" signature="778:906" ph="..." />
-                <marker date="1515724458708" expanded="true" signature="778:919" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="map.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/map.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="106" column="3" lean-forward="true" selection-start-line="106" selection-start-column="3" selection-end-line="106" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/base.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="88" column="21" lean-forward="false" selection-start-line="88" selection-start-column="21" selection-end-line="88" selection-end-column="21" />
+            <state relative-caret-position="275">
+              <caret line="11" column="28" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -175,43 +132,43 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="SCSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getDes</find>
-      <find>getDesc</find>
-      <find>getDescrip</find>
-      <find>getDescription</find>
-      <find>#</find>
-      <find>srong</find>
-      <find>sron</find>
-      <find>sro</find>
-      <find>sr</find>
-      <find>s</find>
-      <find>strong</find>
-      <find>h1</find>
-      <find>h3</find>
-      <find>h</find>
-      <find>h2</find>
-      <find>conso</find>
-      <find>marg</find>
-      <find>mar</find>
-      <find>margin</find>
-      <find>$com</find>
-      <find>$comp</find>
-      <find>ma</find>
-      <find>h4</find>
-      <find>$</find>
-      <find>$nam</find>
-      <find>$nav0</find>
-      <find>$nav</find>
-      <find>$navb</find>
-      <find>$navba</find>
-      <find>$navbar-</find>
+      <find>\(function\(\){.}\)\(\)</find>
+      <find>\(function\(\){}\)\(\)</find>
+      <find>\(function\(\)\{.\}\)\(\)</find>
+      <find>\(function\(\)\{.*\}\)\(\)</find>
+      <find>\(function\(\)\{.*}\)\(\)</find>
+      <find>\(function\(\)\{.}\)\(\)</find>
+      <find>\(function\(\)\{}\)\(\)</find>
+      <find>\(function\(\)\{\}\)\(\)</find>
+      <find>\(function\(\)\{[\s\S]*\}\)\(\)</find>
+      <find>[\s\S]*\}\)\(\)</find>
+      <find>[\s\S]*</find>
+      <find>[\s\S]</find>
+      <find>[\s\S]+</find>
+      <find>f[\s\S]+</find>
+      <find>function([\s\S]+</find>
+      <find>function[\s\S]+</find>
+      <find>function\(\[\s\S]+</find>
+      <find>function\(\) [\s\S]+</find>
+      <find>function\(\)[\s\S]+</find>
+      <find>\function\(\)[\s\S]+</find>
+      <find>\(function\(\)[\s\S]+</find>
+      <find>\(function\(\)([\s\S]+</find>
+      <find>\(function\(\)([\s\S])+</find>
+      <find>\(function\(\)([\s\S])+\</find>
+      <find>\(function\(\)([\s\S])+\)</find>
+      <find>\(function\(\)([\s\S])+\)\</find>
+      <find>\(function\(\)([\s\S])+\)\(</find>
+      <find>\(function\(\)([\s\S])+\)\(\</find>
+      <find>\(function\(\)([\s\S])+\)\(\)</find>
+      <find>\(function([\s\S]+)\)\(\)</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -231,57 +188,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/volunteer/shifts.php" />
-        <option value="$PROJECT_DIR$/volunteer/add_shift.php" />
-        <option value="$PROJECT_DIR$/admin/config.php" />
-        <option value="$PROJECT_DIR$/admin/plants.php" />
-        <option value="$PROJECT_DIR$/admin/users.php" />
-        <option value="$PROJECT_DIR$/admin/pages.php" />
-        <option value="$PROJECT_DIR$/createUser.php" />
-        <option value="$PROJECT_DIR$/login.php" />
-        <option value="$PROJECT_DIR$/backend/Plant.php" />
-        <option value="$PROJECT_DIR$/backend/DBObject.php" />
-        <option value="$PROJECT_DIR$/backend/Page.php" />
-        <option value="$PROJECT_DIR$/backend/Shift.php" />
-        <option value="$PROJECT_DIR$/backend/User.php" />
-        <option value="$PROJECT_DIR$/admin/handlers/deleteBoxPlantEntry.php" />
-        <option value="$PROJECT_DIR$/updateUser.php" />
-        <option value="$PROJECT_DIR$/components/Navbar.php" />
-        <option value="$PROJECT_DIR$/backend/Box.php" />
-        <option value="$PROJECT_DIR$/backend/BoxMgr.php" />
-        <option value="$PROJECT_DIR$/admin/handlers/createUpdateBox.php" />
-        <option value="$PROJECT_DIR$/backend/BoxPlantEntry.php" />
-        <option value="$PROJECT_DIR$/admin/handlers/createUpdateBoxPlantEntry.php" />
-        <option value="$PROJECT_DIR$/components/formfields/BoxPlantEntryFormFields.php" />
-        <option value="$PROJECT_DIR$/components/selectors/BoxSelector.php" />
-        <option value="$PROJECT_DIR$/css/media.scss" />
-        <option value="$PROJECT_DIR$/components/formfields/BoxFormFields.php" />
-        <option value="$PROJECT_DIR$/admin/map.php" />
-        <option value="$PROJECT_DIR$/include.php" />
-        <option value="$PROJECT_DIR$/components/links/BoxPlantEntryLinks.php" />
-        <option value="$PROJECT_DIR$/components/links/BoxLinks.php" />
-        <option value="$PROJECT_DIR$/js/util.js" />
-        <option value="$PROJECT_DIR$/backend/Util.php" />
-        <option value="$PROJECT_DIR$/js/map.js" />
-        <option value="$PROJECT_DIR$/components/Map.php" />
-        <option value="$PROJECT_DIR$/backend/BoxPlantEntryMgr.php" />
         <option value="$PROJECT_DIR$/css/box-popup.scss" />
+        <option value="$PROJECT_DIR$/css/box-info.scss" />
+        <option value="$PROJECT_DIR$/css/forms.scss" />
+        <option value="$PROJECT_DIR$/garden/map.php" />
+        <option value="$PROJECT_DIR$/css/navbar.scss" />
+        <option value="$PROJECT_DIR$/admin/createPage.php" />
+        <option value="$PROJECT_DIR$/admin/gallery.php" />
+        <option value="$PROJECT_DIR$/admin/handlers/createUpdatePicture.php" />
+        <option value="$PROJECT_DIR$/admin/handlers/removePicture.php" />
+        <option value="$PROJECT_DIR$/admin/updatePage.php" />
+        <option value="$PROJECT_DIR$/components/links/BoxPlantEntryLinks.php" />
+        <option value="$PROJECT_DIR$/admin/createBoxPlantEntry.php" />
+        <option value="$PROJECT_DIR$/admin/addPicture.php" />
+        <option value="$PROJECT_DIR$/components/selectors/PageSelector.php" />
+        <option value="$PROJECT_DIR$/backend/PageMgr.php" />
+        <option value="$PROJECT_DIR$/admin/createPlant.php" />
+        <option value="$PROJECT_DIR$/admin/plant.php" />
+        <option value="$PROJECT_DIR$/admin/handlers/addUpdatePicture.php" />
+        <option value="$PROJECT_DIR$/backend/Picture.php" />
+        <option value="$PROJECT_DIR$/backend/DBObject.php" />
+        <option value="$PROJECT_DIR$/backend/PictureMgr.php" />
+        <option value="$PROJECT_DIR$/admin/updateBoxPlantEntry.php" />
+        <option value="$PROJECT_DIR$/admin/updateBox.php" />
+        <option value="$PROJECT_DIR$/admin/updatePicture.php" />
+        <option value="$PROJECT_DIR$/admin/pictures.php" />
+        <option value="$PROJECT_DIR$/garden.php" />
+        <option value="$PROJECT_DIR$/components/Navbar.php" />
+        <option value="$PROJECT_DIR$/css/mixins.scss" />
+        <option value="$PROJECT_DIR$/js/map.js" />
+        <option value="$PROJECT_DIR$/js/overlay.js" />
+        <option value="$PROJECT_DIR$/js/gallery.js" />
+        <option value="$PROJECT_DIR$/css/gallery.scss" />
+        <option value="$PROJECT_DIR$/gallery.php" />
         <option value="$PROJECT_DIR$/components/InteractiveMap.php" />
         <option value="$PROJECT_DIR$/css/base.scss" />
-        <option value="$PROJECT_DIR$/components/BoxInfo.php" />
-        <option value="$PROJECT_DIR$/components/HarvestDisplay.php" />
-        <option value="$PROJECT_DIR$/css/box-info.scss" />
-        <option value="$PROJECT_DIR$/backend/PictureMgr.php" />
-        <option value="$PROJECT_DIR$/backend/Picture.php" />
-        <option value="$PROJECT_DIR$/css/forms.scss" />
-        <option value="$PROJECT_DIR$/css/main.scss" />
-        <option value="$PROJECT_DIR$/css/mixins.scss" />
+        <option value="$PROJECT_DIR$/components/formfields/PageFormFields.php" />
+        <option value="$PROJECT_DIR$/components/formfields/PictureFormFields.php" />
         <option value="$PROJECT_DIR$/css/map.scss" />
-        <option value="$PROJECT_DIR$/garden/map.php" />
+        <option value="$PROJECT_DIR$/css/main.scss" />
         <option value="$PROJECT_DIR$/css/theme.scss" />
-        <option value="$PROJECT_DIR$/components/PageWrapper.php" />
+        <option value="$PROJECT_DIR$/admin/pages.php" />
+        <option value="$PROJECT_DIR$/volunteer/shifts.php" />
         <option value="$PROJECT_DIR$/css/admin-base.scss" />
-        <option value="$PROJECT_DIR$/css/navbar.scss" />
+        <option value="$PROJECT_DIR$/components/selectors/UserSelector.php" />
+        <option value="$PROJECT_DIR$/volunteer/add_shift.php" />
+        <option value="$PROJECT_DIR$/components/HarvestDisplay.php" />
+        <option value="$PROJECT_DIR$/admin/updateHarvest.php" />
+        <option value="$PROJECT_DIR$/components/BoxInfo.php" />
+        <option value="$PROJECT_DIR$/components/PageWrapper.php" />
+        <option value="$PROJECT_DIR$/include.php" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -346,6 +303,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -368,63 +326,30 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="garden" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Greenhouse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="greenhouse" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Greenhouse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="greenhouse" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main.scss" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NestingTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Greenhouse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="greenhouse" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Greenhouse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="greenhouse" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backend" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="reference.settings.deploy.options" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="nodejs_interpreter_path" value="$USER_HOME$/Programs/node-v6.10.3-win-x64/node" />
     <property name="javascript.nodejs.core.library.configured.version" value="6.10.3" />
     <property name="JavaScriptPreferStrict" value="false" />
@@ -440,18 +365,18 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Sunny\School\coop\greenhouse" />
       <recent name="C:\Users\Sunny\School\coop\greenhouse\backend" />
       <recent name="C:\Users\Sunny\School\coop\greenhouse\components\formfields" />
       <recent name="C:\Users\Sunny\School\coop\greenhouse\garden" />
       <recent name="C:\Users\Sunny\School\coop\greenhouse\volunteer" />
-      <recent name="C:\Users\Sunny\School\coop\greenhouse\admin\handlers" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Sunny\School\coop\greenhouse\backend" />
+      <recent name="C:\Users\Sunny\School\coop\greenhouse\components\selectors" />
+      <recent name="C:\Users\Sunny\School\coop\greenhouse" />
       <recent name="C:\Users\Sunny\School\coop\greenhouse\admin" />
       <recent name="C:\Users\Sunny\School\coop\greenhouse\admin\handlers" />
-      <recent name="C:\Users\Sunny\School\coop\greenhouse\components" />
-      <recent name="C:\Users\Sunny\School\coop\greenhouse\components\selectors" />
+      <recent name="C:\Users\Sunny\School\coop\greenhouse\components\formfields" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -575,7 +500,16 @@
       <workItem from="1515606666473" duration="16671000" />
       <workItem from="1515692866921" duration="5543000" />
       <workItem from="1515702899434" duration="702000" />
-      <workItem from="1515722588267" duration="2748000" />
+      <workItem from="1515722588267" duration="2768000" />
+      <workItem from="1515765120381" duration="12689000" />
+      <workItem from="1516034932765" duration="1885000" />
+      <workItem from="1516635582436" duration="2428000" />
+      <workItem from="1516807002377" duration="55000" />
+      <workItem from="1516816322493" duration="73000" />
+      <workItem from="1517682044618" duration="1715000" />
+      <workItem from="1526058199908" duration="343000" />
+      <workItem from="1528770966391" duration="36000" />
+      <workItem from="1534954871369" duration="2513000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1511299733720</created>
@@ -710,11 +644,18 @@
       <option name="project" value="LOCAL" />
       <updated>1515619898105</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Made stuff aesthetic">
+      <created>1515725367058</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1515725367058</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="192873000" />
+    <option name="totallyTimeSpent" value="214630000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1618" height="871" extended-state="6" />
@@ -722,12 +663,12 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31903484" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3230563" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32085562" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32707775" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2025" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.260625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32841823" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -748,12 +689,12 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31903484" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32841823" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3230563" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32841823" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32707775" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2475" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5245283" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32841823" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -782,7 +723,8 @@
     <MESSAGE value="kust" />
     <MESSAGE value="Fixed included.php" />
     <MESSAGE value="Improved interactive map" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved interactive map" />
+    <MESSAGE value="Made stuff aesthetic" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made stuff aesthetic" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -791,161 +733,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/backend/config.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" column="39" lean-forward="true" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/Constants.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/BoxMgr.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/Harvest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="61" column="5" lean-forward="true" selection-start-line="52" selection-start-column="4" selection-end-line="61" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/Plant.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="44" column="5" lean-forward="false" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/BoxPlantEntry.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="71" column="17" lean-forward="true" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/formfields/BoxPlantEntryFormFields.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="41" column="92" lean-forward="true" selection-start-line="41" selection-start-column="92" selection-end-line="41" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/createBox.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/handlers/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/Navbar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-700">
-          <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/selectors/BoxSelector.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="26" column="90" lean-forward="false" selection-start-line="26" selection-start-column="90" selection-end-line="26" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/handlers/createUpdateBoxPlantEntry.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="28" column="54" lean-forward="true" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/media.scss" />
-    <entry file="file://$PROJECT_DIR$/css/base.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/theme.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/admin-base.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/handlers/createUpdateBox.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="12" column="41" lean-forward="true" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/formfields/BoxFormFields.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="28" column="18" lean-forward="false" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/map.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="27" column="14" lean-forward="true" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="242" column="0" lean-forward="true" selection-start-line="242" selection-start-column="0" selection-end-line="242" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="34" column="50" lean-forward="true" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/links/BoxPlantEntryLinks.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="17" column="131" lean-forward="false" selection-start-line="17" selection-start-column="131" selection-end-line="17" selection-end-column="131" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/links/BoxLinks.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
@@ -953,217 +740,382 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/Util.php">
+    <entry file="file://$PROJECT_DIR$/components/links/BoxPlantEntryLinks.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="149" column="45" lean-forward="false" selection-start-line="149" selection-start-column="45" selection-end-line="149" selection-end-column="45" />
+        <state relative-caret-position="240">
+          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/util.js">
+    <entry file="file://$PROJECT_DIR$/components/selectors/PageSelector.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="39" column="29" lean-forward="true" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+        <state relative-caret-position="300">
+          <caret line="21" column="61" lean-forward="false" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/map.js">
+    <entry file="file://$PROJECT_DIR$/backend/PageMgr.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        <state relative-caret-position="425">
+          <caret line="44" column="45" lean-forward="false" selection-start-line="44" selection-start-column="45" selection-end-line="44" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/Map.php">
+    <entry file="file://$PROJECT_DIR$/components/formfields/BoxFormFields.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="29" column="57" lean-forward="false" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="57" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/BoxPlantEntryMgr.php">
+    <entry file="file://$PROJECT_DIR$/components/formfields/BoxPlantEntryFormFields.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="305">
-          <caret line="57" column="16" lean-forward="true" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="16" />
+          <caret line="24" column="23" lean-forward="false" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/box-popup.css" />
-    <entry file="file://$PROJECT_DIR$/components/HarvestDisplay.php">
+    <entry file="file://$PROJECT_DIR$/admin/createPage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="87" column="5" lean-forward="true" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
+        <state relative-caret-position="100">
+          <caret line="5" column="16" lean-forward="true" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/box-info.scss">
+    <entry file="file://$PROJECT_DIR$/admin/plant.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
-          <caret line="18" column="25" lean-forward="true" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+        <state relative-caret-position="160">
+          <caret line="8" column="44" lean-forward="false" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/BoxInfo.php">
+    <entry file="file://$PROJECT_DIR$/backend/DBObject.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="50" column="38" lean-forward="true" selection-start-line="50" selection-start-column="38" selection-end-line="50" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/gallery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="15" column="50" lean-forward="false" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
+        <state relative-caret-position="160">
+          <caret line="8" column="40" lean-forward="true" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/Picture.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+        <state relative-caret-position="25">
+          <caret line="8" column="30" lean-forward="true" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/PictureMgr.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        <state relative-caret-position="440">
+          <caret line="22" column="27" lean-forward="true" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/Box.php">
+    <entry file="file://$PROJECT_DIR$/admin/handlers/addUpdatePicture.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="26" selection-end-column="5" />
+        <state relative-caret-position="340">
+          <caret line="17" column="29" lean-forward="false" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/Page.php">
+    <entry file="file://$PROJECT_DIR$/admin/createPlant.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="5" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="13" selection-end-column="5" />
+        <state relative-caret-position="360">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="21" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/reset.scss">
+    <entry file="file://$PROJECT_DIR$/admin/updateBoxPlantEntry.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-300">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="480">
+          <caret line="24" column="29" lean-forward="false" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/forms.scss">
+    <entry file="file://$PROJECT_DIR$/admin/updatePicture.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="28" column="16" lean-forward="false" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
-          <folding />
+        <state relative-caret-position="405">
+          <caret line="25" column="68" lean-forward="false" selection-start-line="25" selection-start-column="68" selection-end-line="25" selection-end-column="68" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/base.scss">
+    <entry file="file://$PROJECT_DIR$/admin/pictures.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="88" column="21" lean-forward="false" selection-start-line="88" selection-start-column="21" selection-end-line="88" selection-end-column="21" />
-          <folding />
+        <state relative-caret-position="180">
+          <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/mixins.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding />
+        <state relative-caret-position="120">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/map.scss">
+    <entry file="file://$PROJECT_DIR$/garden.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="106" column="3" lean-forward="true" selection-start-line="106" selection-start-column="3" selection-end-line="106" selection-end-column="3" />
-          <folding />
+        <state relative-caret-position="20">
+          <caret line="1" column="14" lean-forward="false" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+          <folding>
+            <marker date="1515783295134" expanded="true" signature="702:1202" ph="..." />
+            <marker date="1515783295134" expanded="true" signature="729:1176" ph="..." />
+            <marker date="1515783295134" expanded="true" signature="798:1086" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/Navbar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="69" column="55" lean-forward="false" selection-start-line="69" selection-start-column="55" selection-end-line="69" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/gallery.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="41" column="5" lean-forward="false" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/gallery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gallery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="24" column="12" lean-forward="false" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+          <folding>
+            <marker date="1515789225907" expanded="true" signature="375:754" ph="..." />
+            <marker date="1515789225907" expanded="true" signature="400:438" ph="..." />
+            <marker date="1515789225907" expanded="true" signature="480:531" ph="..." />
+            <marker date="1515789225907" expanded="true" signature="480:573" ph="..." />
+            <marker date="1515789225907" expanded="true" signature="574:754" ph="..." />
+            <marker date="1515789225907" expanded="true" signature="619:675" ph="..." />
+            <marker date="1515789225907" expanded="true" signature="676:746" ph="..." />
+            <marker date="1515789225907" expanded="true" signature="831:849" ph="..." />
+            <marker date="1515789225907" expanded="true" signature="872:959" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/base.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1580">
+          <caret line="79" column="36" lean-forward="false" selection-start-line="79" selection-start-column="36" selection-end-line="79" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/overlay.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="13" column="41" lean-forward="false" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/formfields/PageFormFields.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="31" column="44" lean-forward="false" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/formfields/PictureFormFields.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="15" column="43" lean-forward="false" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/map.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="29" column="33" lean-forward="false" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/main.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="25" column="32" lean-forward="false" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/InteractiveMap.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-355">
-          <caret line="56" column="16" lean-forward="true" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
-          <folding>
-            <marker date="1515621523403" expanded="true" signature="1378:1552" ph="..." />
-            <marker date="1515621523403" expanded="true" signature="2039:2296" ph="..." />
-            <marker date="1515621523403" expanded="true" signature="2203:2232" ph="..." />
-            <marker date="1515621523403" expanded="true" signature="2395:2782" ph="..." />
-            <marker date="1515621523403" expanded="true" signature="2480:2624" ph="..." />
-            <marker date="1515621523403" expanded="true" signature="2655:2767" ph="..." />
-            <marker date="1515621523403" expanded="true" signature="2806:2896" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/garden/map.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="29" column="15" lean-forward="true" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
-          <folding>
-            <marker date="1515442841486" expanded="true" signature="705:1205" ph="..." />
-            <marker date="1515442841486" expanded="true" signature="732:1179" ph="..." />
-            <marker date="1515442841486" expanded="true" signature="801:1089" ph="..." />
-          </folding>
+        <state relative-caret-position="169">
+          <caret line="22" column="16" lean-forward="true" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/theme.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-          <folding />
+        <state relative-caret-position="240">
+          <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/PageWrapper.php">
+    <entry file="file://$PROJECT_DIR$/admin/pages.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding>
-            <marker date="1515724458708" expanded="true" signature="376:942" ph="..." />
-            <marker date="1515724458708" expanded="true" signature="391:667" ph="..." />
-            <marker date="1515724458708" expanded="true" signature="682:926" ph="..." />
-            <marker date="1515724458708" expanded="true" signature="778:906" ph="..." />
-            <marker date="1515724458708" expanded="true" signature="778:919" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="580">
+          <caret line="32" column="10" lean-forward="true" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/admin-base.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        <state relative-caret-position="200">
+          <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/addPicture.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="23" column="22" lean-forward="false" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/selectors/UserSelector.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="26" column="29" lean-forward="false" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/volunteer/add_shift.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="740">
+          <caret line="42" column="19" lean-forward="false" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/volunteer/shifts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1720">
+          <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/HarvestDisplay.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="65" column="95" lean-forward="false" selection-start-line="65" selection-start-column="95" selection-end-line="65" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/updateBox.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="26" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/Harvest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-540">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/updateHarvest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="26" column="31" lean-forward="false" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/InteractiveMap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1013">
+          <caret line="75" column="59" lean-forward="true" selection-start-line="75" selection-start-column="59" selection-end-line="75" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/map.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2400">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/PageWrapper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="34" column="39" lean-forward="false" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
+          <folding>
+            <marker date="1516816346569" expanded="true" signature="392:961" ph="..." />
+            <marker date="1516816346569" expanded="true" signature="407:686" ph="..." />
+            <marker date="1516816346569" expanded="true" signature="701:945" ph="..." />
+            <marker date="1516816346569" expanded="true" signature="797:938" ph="..." />
+            <marker date="1516816346569" expanded="true" signature="812:929" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/BoxInfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="635">
+          <caret line="44" column="35" lean-forward="false" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/Util.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="28" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/navbar.scss">
+    <entry file="file://$PROJECT_DIR$/backend/config.ini">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+        <state relative-caret-position="100">
+          <caret line="4" column="31" lean-forward="false" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/Page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="18" column="34" lean-forward="false" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+          <folding>
+            <marker date="1513710804612" expanded="true" signature="788:825" ph="UPDATE pages... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
           <folding />
         </state>
       </provider>

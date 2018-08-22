@@ -45,7 +45,7 @@ HTML;
 HTML;
 
 	echo PageWrapper::render([
-		"title" => "Pages",
+		"title" => "Files",
 		"content" => $page
 	]);
 })();

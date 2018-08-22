@@ -1,0 +1,53 @@
+@import "theme";
+@import "mixins";
+
+#pictures {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: calc(100vh - #{$navbar-height});
+  justify-content: center;
+  align-items: center;
+  .picture-tile {
+    display: inline-block;
+    width: $image-tile-width;
+    height: $image-tile-height;
+    margin: 10px;
+    position: relative;
+    .picture {
+      @include fill-container-absolute();
+    }
+    .loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $image-tile-background;
+      @include fill-container-absolute(-1)
+    }
+    .description-block {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 111;
+      min-height: 33%;
+      opacity: 0;
+      transition: opacity 0.2s;
+      background: $image-description-background;
+      color: white;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.02);
+      .description-block {
+        opacity: 1;
+      }
+    }
+  }
+}

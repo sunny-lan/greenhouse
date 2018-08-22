@@ -78,7 +78,6 @@ table {
   justify-content: center;
   .overlay-background {
     background: $overlay-background;
-    opacity: 0.5;
     position: absolute;
     top: 0;
     left: 0;
@@ -86,12 +85,10 @@ table {
     right: 0;
   }
   .overlay-content {
-    max-height: 90vh;
-    min-width: 400px;
+    max-height: calc(100vh - #{$navbar-height} - 20px);
     z-index: 777;
-    padding: 30px;
-    background: $popup-background;
-    .box-popup {
+    overflow-y: auto;
+    .popup-content {
       display: block;
     }
   }
@@ -99,4 +96,8 @@ table {
 
 .overlay.shown {
   display: flex;
+}
+
+.popup-content {
+  display: none;
 }

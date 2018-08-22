@@ -122,8 +122,11 @@ HTML;
 	}
 
 	$page = <<<HTML
+	<h1 id="title">Shifts</h1>
+    <div id="actions">
     {$filterHTML}
-    <a href="javascript: setPage([], 'add_shift.php')">create shift</a>
+    <button onclick="setPage([], 'add_shift.php')">Create</button>
+    </div>
     <table border="1">
         <tr>
         	<th>ID</th>

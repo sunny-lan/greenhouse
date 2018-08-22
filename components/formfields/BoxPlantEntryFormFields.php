@@ -24,7 +24,7 @@ class BoxPlantEntryFormFields implements Component
 
         $plantSelector=PlantSelector::render(['name'=>'plantID', 'value'=>Util::guard($entry, 'getPlant')]);
 
-        $boxSelector = BoxSelector::render(['name' => 'boxID', 'value' => $selectedBox]);
+        $boxSelector = UserSelector::render(['name' => 'boxID', 'value' => $selectedBox]);
 
         $page = <<<HTML
         Box: {$boxSelector}

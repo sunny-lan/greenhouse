@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGE,gBAAM;EACJ,aAAa,EAAE,IAAI;AAErB,aAAG;EACD,WAAW,EAAE,IAAI;EACjB,MAAM,EAAE,eAAsB;EAC9B,UAAU,ECWK,OAAO",
+"sources": ["box-info.scss","theme.scss"],
+"names": [],
+"file": "box-info.css"
+}

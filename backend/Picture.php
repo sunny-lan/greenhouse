@@ -29,8 +29,8 @@ class Picture extends DBObject
 
 	//picture
 
-	function getPicture()
+	function getFile()
 	{
-		return new Picture($this->selectF('id'));
+		return new Page($this->selectF('id'));
 	}
 }

@@ -20,6 +20,11 @@ HTML;
         'extendAttr' => 'enctype="multipart/form-data"'
     ]);
 
+	$page = <<<HTML
+	<h1 id="title">Upload file</h1>
+	{$page}
+HTML;
+
     echo PageWrapper::render([
         "title" => "Create Page",
         "content" => $page

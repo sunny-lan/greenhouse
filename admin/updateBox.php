@@ -21,6 +21,11 @@ HTML;
         'content' => $page
     ]);
 
+	$page = <<<HTML
+	<h1 id="title">Edit box</h1>
+    {$page}
+HTML;
+
     echo PageWrapper::render([
         'title' => 'Edit box',
         'content' => $page

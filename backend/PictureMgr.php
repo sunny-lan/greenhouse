@@ -8,24 +8,24 @@
  */
 class PictureMgr extends DBMgr
 {
-    function __construct()
-    {
-        parent::__construct('pictures');
-    }
+	function __construct()
+	{
+		parent::__construct('pictures');
+	}
 
-    function addPicture(string $description, Picture $picture)
-    {
-    	$pictureID=$picture->getID();
-        Util::queryW($this->db, "INSERT INTO pictures (description, page_id) VALUES ('$description', '$pictureID')");
-        return new Picture(Util::getLastID($this->db));
-    }
+	function addPicture(Page $page)
+	{
+		$pageID = $page->getID();
+		Util::queryW($this->db, "INSERT INTO pictures (description, id) VALUES ('', '$pageID')");
+		return new Picture($pageID);
+	}
 
-    function listPictures()
-    {
-        $sqlRes = Util::queryW($this->db, "SELECT id FROM pictures");
-        $res = [];
-        while ($row = $sqlRes->fetch_assoc())
-            $res[] = new Picture($row['id']);
-        return $res;
-    }
+	function listPictures()
+	{
+		$sqlRes = Util::queryW($this->db, "SELECT id FROM pictures");
+		$res = [];
+		while ($row = $sqlRes->fetch_assoc())
+			$res[] = new Picture($row['id']);
+		return $res;
+	}
 }

@@ -1,12 +1,13 @@
 <?php
+
 require_once 'include.php';
 
 (function () {
-    $mgr = new PageMgr();
-    $page = Util::guard($mgr->findPageByName('home_page'), 'getContent');
+	$mgr = new PageMgr();
+	$page = Util::guard($mgr->findPageByName('home_page'), 'getContent');
 
-    if ($page === null)
-        $page = <<<HTML
+	if ($page === null)
+		$page = <<<HTML
         <h1 style="text-align: center">Hello! This is the home page</h1>
         <div style="max-width: 640px">
         If you are seeing this message, that means you have not uploaded a custom home page.
@@ -15,8 +16,8 @@ require_once 'include.php';
         </div>
 HTML;
 
-    echo PageWrapper::render([
-        "title" => "Home",
-        "content" => $page
-    ]);
+	echo PageWrapper::render([
+		"title" => "Home",
+		"content" => $page
+	]);
 })();

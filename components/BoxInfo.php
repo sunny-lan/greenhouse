@@ -59,13 +59,19 @@ HTML;
 		if ($GLOBALS['userLvl'] === Constants::LVL_ADMIN)
 			$adminHTML = BoxLinks::render($param);
 
+		$descriptionHTML = 'No notes';
+		if (!empty($box->getDescription()))
+			$descriptionHTML = <<<HTML
+				<pre>{$box->getDescription()}</pre>
+HTML;
+
 		return <<<HTML
 		<div class="box-info">
 			<div class="title">
 				<h1>{$box->getName()}</h1>
 				{$adminHTML}
 			</div>
-			<pre>{$box->getDescription()}</pre>
+			{$descriptionHTML}
 			<div class="plant-entries">
 				<h2>Plant entries</h2>
 				<ul>{$entriesHTML}</ul>

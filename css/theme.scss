@@ -10,17 +10,23 @@ $table-header: $metro-blue;
 $error-msg: red;
 $box-popup-link: $metro-blue;
 $table-separator: #ddd;
-$table-row-hover: #f5f5f5;
+$table-row-hover: #f0f0f0;
 $table-hover-background: lightblue;
 $plant-hover: greenyellow;
-$overlay-background: black;
-$popup-background: white;
+$overlay-background: rgba(0,0,0,0.7);
+$box-popup-background: white;
 $zoom-control-background: #f5f5f5;
 $map-background: white;
 $map-border: none;
 $note-border: none; //solid 1px black;
 $note-background: #f5f5f5;
 $footer-background: #566D4F;
+$image-tile-background: white;
+$image-description-background: rgba(0,0,0,0.8);
+$footer-font-size: 11px;
 
 $navbar-height: 80px;
-$footer-height: 40px;
+$footer-height: 20px;
+
+$image-tile-width: 400px;
+$image-tile-height: $image-tile-width;

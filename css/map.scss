@@ -5,7 +5,9 @@
   overflow: auto;
   position: relative;
   border: $map-border;
-  .loading{
+  height: calc(100vh - #{$navbar-height} - 20px);
+
+  .loading {
     position: absolute;
     z-index: -1;
     top: 50%;
@@ -61,10 +63,6 @@
       .box-popup-link {
         color: $box-popup-link;
       }
-      .box-popup {
-        display: none;
-        overflow-y: scroll;
-      }
     }
   }
 
@@ -77,6 +75,12 @@
   }
 
   background: $map-background;
+}
+
+.box-popup {
+  min-width: 400px;
+  padding: 30px;
+  background: $box-popup-background;
 }
 
 @import "box-info";
@@ -92,6 +96,7 @@
   padding: 10px 12px;
   #sidebar {
     min-width: 300px;
+    flex-shrink: 0;
     //overflow-y: scroll;
     display: flex;
     flex-direction: column;
